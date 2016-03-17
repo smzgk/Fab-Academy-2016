@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- temporary -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/template.js"></script>
+
+    <script type="text/javascript" src="/archives/2016/fablabamsterdam/students/205/js/template.js"></script>
+    <script type="text/javascript">header();</script>
+  </head>
+
+  <body>
+    <script type="text/javascript">navigation();</script>
+
+    <div class="script">
+      <div class="container">
+        <div class="page-header">
+          <h1><small>Wk1: 2016/01/27</small></h1>
+          <h2>PRINCIPLES AND PRACTICES, PROJECT MANAGEMENT</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9">
+            <h3>0. Assignments for week1</h3>
+            <hr/>
+            <div class="lead">
+              <p>The assignments for week1 were as below;</p>
+              <ol>
+                <li>Build a personal site describing you and your final project.</li>
+                <li>Upload it to the class archive. Do a git tutorial.</li>
+                <li>Plan and sketch a potential semester project and add it to your website.</li>
+              </ol>
+            </div>
+            </br>
+            <h3>1. Building personal website</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                Before enter the explanation, I would like to show my system environment below.;
+              </p>
+              <br>
+              <p>System Emvironment:</p>
+              <ul>
+                <li>PC: Macbook Air(2015)</li>
+                <li>OS: iOS Yosemite v10</li>
+                <li>Coding Soft: <a href="https://www.sublimetext.com" target="_blank">Sublime text 2.0</a></li>
+                <li>Browse: Google Chrome / Opera</li>
+                <li>Command line tool: <a href="https://www.iterm2.com" target="_blank">iTerm</a></li>
+              </ul>
+              <br>
+              <p>
+                Fortunately, I worked as server side engineer, using Ruby on Rails, I had already set up my coding environment before the class start, so mainly I am using the same system environment as bofore.<br>
+                <br>
+                Though I can write code to a certain extent, I had never developed website using HTML/CSS/JS from scrach since my high school days, that is over 5 years ago, so I have to learn basic skills for HTML/CSS/JS again. <br>
+                <br>
+                For my study, I took simple and free tutorial of <a href="https://www.codecademy.com/learn" target="_blank">codecademy</a>, which is an online interactive platform that offers free coding classes in 9 different programming languages(Ruby, HTML,  CSS or so). After I complete HTML/CSS course in codecademy for 3-4 hours, I started to build my website.<br>
+                <br>
+                In additon to that, I used <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>, which is free and open-source collection of design template, and it will help me greatly. Regarding to the other parts, I implemented functions(fixed navigation bar/respond navigation/or so) by using tips from Google and by trial and error. </li>
+              </p>
+              <br>
+              <div class="screenshot">
+                <img src="../img/wk01/wk01_01.png">
+              </div>
+              <p class="text-center">Coding HTML/CSS on Sublime Text</p>
+            </div>
+            </br>
+            </br>
+
+            <h3>2. Using version control protocols</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                In the class of week1, Prf. Niel taught us how to use version control protocols, which called <a href="https://git-scm.com" target="_blank">"Git"</a>, which is widely-used source code management system for software development.<br>
+                <br> 
+                Fortunately, I had already known how to use version control protocols with Git because I was using <a href="https://github.com" target="_blank">Github</a> flow in system development when I worked as server-side engineer at ICT startup in Africa last year, then I was able to setup and operate Git easily.<br>
+                <br> 
+                I summarize and write briefly how to set up and operate Git as below.
+              </p>
+              <br>            
+              <p><strong>Basic setup</strong></p>
+              <ol>
+                <li>Make account of Gitlab
+                  <P>
+                    First, I signed up <a href="https://about.gitlab.com" target="_blank">Gitlab</a>, which is a web-based Git repository manager Fab Academy Organizers directed us to use. (The function itself is almost same as Github)
+                  </p>
+                </li>
+                <li>Generate SSH key</li>
+                  <p>
+                    Next, steudents had to generate ssh key for Gitlab by referring to the web manual on Github(<a href="https://help.github.com/articles/generating-an-ssh-key/" target="_blank">"Generating an SSH key"</a>). SSH is a encrypted network protocol to allow users remote login and other network services to operate securely. As for me, I had already generated, so I registered my ssh key to Gitlab.
+                  </p>
+                <li>Register ssh key and setup connection
+                  <p>
+                    After generating ssh key, copy and past the key to gitlab to setup secure connection betweek our PC and remote repository.
+                  </p>
+                </li>
+              </ol>
+              <br>
+              <p><strong>Prepare working directory</strong></p>
+              <p>
+                After finishing basic setup, I prepared working directory in local envirnment. First, to clone remote repository to local by, put the code below to terminal. 
+                <pre>git clone (remote-repository-url) . # Clone a repository into a new directory</pre>
+              </p>
+              <br>
+              <p><strong>Record working output in remote repository</strong></p>
+              <p>
+                After we finished your temporary work, we have to uplaod your work. To do so, every time finishing and updating our work, we have to do sequent process below, so that we can record changes we made to remote repository and deploy our up-to-date version to server.
+                <pre>
+git add . #Add current file contents and changes to the index.
+git commit #Record changes to local repository.
+git pull #Fetch from and integrate with remote repository
+git push  #Post working record to rocal repository</pre>
+              </p>
+              </br>
+              <p><strong>Other frequent Git code</strong></p>
+              <p>
+                Thogh there's no explanation in the class, I will list up frequent used and userful git codes below.
+              </p>
+              <br>
+              <table class="table">
+                <thead>
+                  <th>Git Code</th>
+                  <th>explanation</th>
+                </thead>
+                <tr>
+                  <td><code>git status</pre></td>
+                  <td>Show the working tree status</td>
+                </tr>
+                <tr>
+                  <td><code>git config</pre></td>
+                  <td>Get and set repository or global options.</td>
+                </tr>
+                <tr>
+                  <td><code>git remote</pre></td>
+                  <td>manage set of tracked repositories.</td>
+                </tr>
+
+                <tr>
+                  <td><code>git branch</pre></td>
+                  <td>List all branches.</td>
+                </tr>
+                <tr>
+                  <td><code>git branch (branch name)</pre></td>
+                  <td>Create new branches.</td>
+                </tr>
+                <tr>
+                  <td><code>git checkout</pre></td>
+                  <td>Switch branches or restore working tree files.</td>
+                </tr>
+                <tr>
+                  <td><code>git merge</pre></td>
+                  <td>Join two or more development histories together.</td>
+                </tr>
+                <tr>
+                  <td><code>git log</pre></td>
+                  <td>Show commit logs.</td>
+                </tr>
+              </table>
+            </div>
+            </br>
+            <h3>3. Making proposal of final project </h3>
+            <hr/>
+            <div class="lead">
+              <p>See <a href="../projects/v01.html">the proposals of final project</a></p>
+            </div>
+            </br>
+            </br>
+          </div>
+
+          <!-- left-side -->
+          <div class="col-md-3">
+            <h4>
+              <span class="glyphicon glyphicon-th-list"></span>
+              Outline of this page
+            </h4>
+            <hr/>
+            <p>
+              1. Building personal website<br>
+              2. Using version control protocols<br>
+              3. Making proposal of final project<br>
+            </p>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-file"></span>
+              Material for Wk1
+            </h4>
+            <hr/>
+            <p><strong>Handbook and Assesment Sheet</strong></p>
+            <p>Here is the Fab Academy Handbook and the shorter version of the Evaluation Checklist 2015 on google docs:</p>
+            <ul>
+              <li><a href="https://docs.google.com/document/d/1KomQyZGm4z4l6jxrfnfBkowaMTrUbEjKziwz1gh4HCk/edit" target="_blank">The Fab Academy Handbook 2016</a></li>
+            <li><a href="https://docs.google.com/document/d/1zAWJiWkeQLfKYBh_Mmz1n4kAwyFWOgF-MGMqIPLSMOo/edit#heading=h.1vn18g2vgwnd" target="_blank">Fab Academy 2016 Assignments and Assessment </a></li>
+            </ul>
+            <p><strong>Lecture Note</strong></p>
+            <ul>
+              <li><a href="http://academy.cba.mit.edu/classes/principles_practices/index.html" target="_blank">Principles and Practices</a></li>
+              <li><a href="http://academy.cba.mit.edu/classes/project_management/index.html" target="_blank">Project Management</a></li>
+            </ul>
+
+            <p><strong>Tools</strong></p>
+            <ul>
+              <li><a href="https://www.sublimetext.com" target="_blank">Sublime text 2.0</a></li>
+              <li><a href="https://git-scm.com" target="_blank">Git</a></li>
+              <li><a href="https://about.gitlab.com" target="_blank">Gitlab</a></li>
+            </ul>
+
+            <p><strong>Learning Support</strong></p>
+            <p>Here is the english tutorials for all of Fab Academy lectures</p>
+            <ul>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/index_english.html" target="_blank">Fab Academy 2016 English Tutorials</a></li>
+            </ul>
+            <p>Here is the english tutorials for Wk1</p>
+            <ul>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/gitvsmercurial.html" target="_blank">Git vs. Mercurial</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/html-css.html" target="_blank">Resources for learning HTML+CSS</a></li>
+              <li><a href="https://github.com/openp2pdesign/FabAcademy_Template" target="_blank">A template for Fab Academy websites</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/gitCheatSheet.html" target="_blank">Git Extended Cheat Sheet</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <!--
+            <h4>
+              <span class="glyphicon glyphicon-download-alt"></span>
+              Files to download from Wk1
+            </h4>
+            <hr/>
+            <p>Here you can find this weeks's lectures on week1 on VIMEO:</p>
+            <p>(2016.01.27)</p>
+            <ul>
+              <li><a href="https://vimeo.com/153262283" target="_blank">Introduction: Principles and Practices</a></li>
+            <li><a href="https://vimeo.com/153263942" target="_blank">Lesson-01: Project Management</a></li>
+            </ul>
+            </br>
+            </br>
+            -->
+            <h4>
+              <span class="glyphicon glyphicon-film"></span>
+              Videos of Wk1
+            </h4>
+            <hr/>
+            <p>Here you can find this weeks's lectures on week1 on VIMEO:</p>
+            <p>(2016.01.27)</p>
+            <ul>
+              <li><a href="https://vimeo.com/153262283" target="_blank">Introduction: Principles and Practices</a></li>
+              <li><a href="https://vimeo.com/153263942" target="_blank">Lesson-01: Project Management</a></li>
+            </ul>
+            <p>(2016.02.03)</p>
+            <ul>
+              <li><a href="https://vimeo.com/154075585" target="_blank">Review 01: Project Management</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-check"></span>
+              Checklist for Wk1
+            </h4>
+            <hr/>
+            <h5><strong>Assignments:</strong></h5>
+            <ul>
+              <li>Build a personal site describing you and your final project.</li>
+              <li>Plan and sketch a potential semester project and add it to your website.</li>
+              <li>Upload it to the class archive. Do a git tutorial.</li>
+            </ul>
+            <h5><strong>Learning outcomes:</strong></h5>
+            <ul>
+              <li>Explore and use website development tools</li>   
+              <li>Formulate a final project proposal</li>
+              <li>Identify version control protocols</li>
+            </ul>
+            <h5><strong>Have you:</strong></h5>
+            <ul>
+              <li>made a website and described how you did it</li>
+              <li>introduced yourself</li>
+              <li>made a sketch of your final project</li>
+              <li>pushed to the class archive</li>
+              <li>documented steps for uploading files to archive</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">footer();</script>
+  </body>
+</html>

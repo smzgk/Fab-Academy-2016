@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- temporary -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/template.js"></script>
+
+    <script type="text/javascript" src="/archives/2016/fablabamsterdam/students/205/js/template.js"></script>
+    <script type="text/javascript">header();</script>
+  </head>
+
+  <body>
+    <script type="text/javascript">navigation();</script>
+
+    <div class="script">
+      <div class="container">
+        <div class="page-header">
+          <h1><small>Wk06: 2016/03/02</small></h1>
+          <h2>ELECTRONICS DESIGN (WEEK 1 OF 2)</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9">
+            <h3>0. Assignments for week6</h3>
+            <hr/>
+            <div class="lead">
+              <p>The assignments for week6 were as below;</p>
+              <ol>
+                <li>Redraw the echo hello-world board</li>
+                <li>add at least a button and LED with current-limiting resistor</li>
+                <li>(or design your own)</li>
+              </ol>
+            </div>
+            </br>
+
+            <h3>1. Basic Information</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                XXXXXX
+              </p>
+              <br>
+              <p><strong>Electrical Concepts</strong></p>
+              <p>
+                XXXXXX
+              </p>
+              <br>
+              <p><strong>Ohm's law</strong></p>
+              <p>
+                XXXXXX
+              </p>
+              <br>
+              <p><strong>Schematic Symbols</strong></p>
+              <p>
+                XXXXXX
+              </p>
+            </div>
+            </br>
+            </br>
+
+            <h3>2. Redraw and make the echo hello-world board</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                This week, we redrew and made echo hello-world board as below.
+              </p>
+              <br>
+              <p><strong>Draw the Schematic</strong></p>
+              <p>
+                First, we install <a href="http://www.cadsoftusa.com/" target="_blank">EAGLE</a>, which is open source software for designing circuit board. Using EAGLE, we drew the schematic of echo hello-world board as below.
+              </p>
+              <br>
+              <div class="screenshot">
+                <img src="../img/wk06/01_shcematic.png" height="1012" width="1552">
+              </div>
+              <p class="text-center">Schematic of hello-world board</p>
+              <br>
+              <p>
+                And the table below is the inventory list for hello-world board. We downloaded <a href="../img/wk06/01_fab.lbr">fab.lbr</a> from our tutorial site, and used the parts to drow the schematic above.
+              </p>
+              <br>
+              <p class="text-center">Bill of Hello World Board</p>
+              <TABLE class="table table-bordered table-striped" style="text-align: center">
+                <TR>
+                  <TH> Part
+                  <TH> Category
+                  <TH> Value
+                  <TH> Package
+                <TR>
+                  <TD> IC1
+                  <TD> microcontroller
+                  <TD> -
+                  <TD> ATTINY44A
+                <TR>
+                  <TD> R1/R3
+                  <TD> Resistor
+                  <TD> 10 Kilo-Ohm
+                  <TD> 1206
+                <TR>
+                  <TD> R2
+                  <TD> Resistor
+                  <TD> 499 Ohm
+                  <TD> 1206
+                <TR>
+                  <TD> C1 
+                  <TD> Capacitor
+                  <TD> -
+                  <TD> CAP-US1206
+                <TR>
+                  <TD> L1
+                  <TD> LED
+                  <TD> -
+                  <TD> 1206(Green)
+                <TR>
+                  <TD> S1
+                  <TD> Button
+                  <TD> -
+                  <TD> 6MM_SWITCH
+                <TR>
+                  <TD> JP1
+                  <TD> FTDI header
+                  <TD> -
+                  <TD> FTDI
+                <TR>
+                  <TD> U$3
+                  <TD> Resonator
+                  <TD> 20MHz 
+                  <TD> 
+                <TR>
+                  <TD> U$4
+                  <TD> 6-pin programming header
+                  <TD> -
+                  <TD> AVRISPMD
+              </TABLE>              
+              <br>
+
+              <p><strong>Draw the Board</strong></p>
+              <p>
+                Next, we switched the drawing board mode as below. The parts which we drew and put on the shcematic was automatically connected with each other and shown on the board.
+              </p>
+
+              <div class="screenshot">
+                <img src="../img/wk06/02_make.png" height="1012" width="1552">
+              </div>
+              <p class="text-center">Board View on Eagle</p>
+
+              <p>
+                Next, we adjust the position of each parts and make route connecting each parts, and the board below is my version 1 of hello-world board.
+              </p>
+
+              <div class="screenshot">
+                <img src="../img/wk06/03_make.png" height="1012" width="1552">
+              </div>
+              <p class="text-center">Hello-world Board version 1</p>
+
+              <p>
+                After connecting the routes, we have to debug the circuit. There are several methods to debug on EAGLE as below.
+                <ul>
+                  <li>Show object: you can check connection between parts</li>
+                  <li>Calculate shortest airwires: you can see airwires</li>
+                  <li>Show errors: you can check erros ditected automatically </li>
+                </ul>
+              </p>
+
+              <div class="screenshot">
+                <img src="../img/wk06/04_check.png" height="985" width="1266">
+              </div>
+              <p class="text-center">Debugging</p>
+
+              <p>
+                After debugging, we can export png file from export menu. In this board, the settings should be MONOCHROME and 500 DPI.
+              </p>
+
+
+              <div class="screenshot">
+                <img src="../img/wk06/05_error.png" height="985" width="1266">
+              </div>
+              <p class="text-center">Cutting blueprint</p>
+
+              <br>
+              <p><strong>Draw the Board</strong></p>
+              <p>
+                Next, we modify the image on <a href="https://www.gimp.org/" target="_blank">GIMP</a>, which is free software enable us editing raster image. I added the edge and some characters as below. The route which had to be connected wes not connected as below.
+              </p>
+
+              <div class="screenshot">
+                <img src="../img/wk06/06_error.png" height="670" width="697">
+              </div>
+              <p class="text-center">Hello-world Board version 1</p>
+              <br>
+
+              <p><strong>Cutting by Milling machine</strong></p>
+              <p>
+                Then I entered into cutting on CNC milling machine, however, I made several mistakes. Generally I could did my assignments smoothly, the main bottleneck was this milling part.<br>
+                <br>
+                First mistake was regarding the seting of Modela. Though I set 1.1 as <code>error</code>, it was not enough that I could not cut separately on the conrner of the board as below.
+              </p>
+
+              <div class="screenshot">
+                <img src="../img/wk06/07_error1.png" height="533" width="567">
+              </div>
+              <p class="text-center">Not cut separately</p>
+
+              <p>
+                Then I set 2 as <code>offset</code>, however, the next big mistake has occured. I set the width of route under 4mm on designing by EAGLE, so the machine cannot cutted clearly the routes on the board.
+              </p>
+
+
+              <div class="screenshot">
+                <img src="../img/wk06/07_error.png" height="533" width="567">
+              </div>
+              <p class="text-center">Mistaken board</p>
+
+              <p>
+                Then, I went back to EAGLE, and adjusted the width of every route. The png images below are the version 2 of hello-world board.
+              </p>
+
+              <table style="width:100%">
+                <tr>        
+                  <td><img src="../img/wk06/20160303_hello_world.png" width="400"></td>
+                  <td><img src="../img/wk06/20160303_hello_world_edge.png" width="400"></td>
+                </tr>
+              </table>
+              <p class="text-center">hello-world board version 2</p>
+              <br>
+
+              <p>
+                Then finally I successfuly cut the board as below. There were several rough parts, so I used <strong>sand paper</strong> to flatten the surfase.
+              </p>
+
+
+              <div class="screenshot">
+                <img src="../img/wk06/08_board.png" height="526" width="565">
+              </div>
+              <p class="text-center">hello-world board</p>
+
+              <br>
+              <p><strong>Solderling</strong></p>
+              <p>
+                Next, I soldered the components to the board I cut. Though I felt it diffucult to solder the resonator as first, generally I was able to finish the task without big problems. After soldering, I debuged and check the operation by my laptop, then I finished my assignments.
+              </p>
+
+
+              <div class="screenshot">
+                <img src="../img/wk06/09_fin.png" height="509" width="587">
+              </div>
+              <p class="text-center">hello-world board</p>
+
+
+
+            </div>
+            </br>
+          </div>
+
+          <!-- left-side -->
+          <div class="col-md-3">
+            <h4>
+              <span class="glyphicon glyphicon-th-list"></span>
+              Outline of this page
+            </h4>
+            <hr/>
+            <p>
+              1. Basic information<br>
+              2. Redraw and make the echo hello-world board<br>
+            </p>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-download-alt"></span>
+              Download output of Wk6
+            </h4>
+            <hr/>
+            <p>Here are my output files for Wk6:</p>
+            <ul>
+              <li><a href="../img/Wk06/20160303_hello_world.png" target="_blank">20160303_hello_world.PNG</a></li>
+              <li><a href="../img/Wk06/20160303_hello_world_edge.png" target="_blank">20160303_hello_world_edge.PNG</a></li>
+              <li><a href="../img/Wk06/20160303_hello_world.sch" target="_blank">20160303_hello_world.SCH</a></li>
+              <li><a href="../img/Wk06/20160303_hello_world.brd" target="_blank">20160303_hello_world.BRD</a></li>
+              <li><a href="../img/Wk06/20160303_hello_world.xcf" target="_blank">20160303_hello_world.XCF</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-file"></span>
+              Lecture Material for Wk6
+            </h4>
+            <hr/>
+            <p><strong>Lecture Note</strong></p>
+            <ul>
+              <li><a href="http://academy.cba.mit.edu/classes/electronics_design/index.html" target="_blank">Electronics Design</a></li>
+            </ul>
+            <p><strong>Tools</strong></p>
+            <ul>
+              <li><a href="http://www.cadsoftusa.com/" target="_blank">EAGLE</a></li>
+              <li><a href="http://fablab.waag.org/machine/small-milling-machine" target="_blank">CNC milling machine: Roland Modela MDX-20</a></li>
+              <li><a href="https://www.gimp.org/" target="_blank">GIMP</a></li>
+              <li><a href="http://kokompe.cba.mit.edu/" target="_blank">Fab Module</a></li>              
+              <li>Maltimeter</li>
+            </ul>
+            <p><strong>Learning Support</strong></p>
+            <ul>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/electronics_design_eagle.html" target="_blank">Introduction to EAGLE</a><br>
+                You can learn how to make hello world board</li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/aboutClockSpeed.html" target="_blank">Why did we put a 20MHz crystal on the Hello FTDI?</a></li>
+              <li><a href="https://6002x.mitx.mit.edu/wiki/view/UsefulFreeTools" target="_blank">Free simulation tools from MITx</a></li>
+            </ul>
+            <p>(Basic Tutorial)</p>
+            <ul>
+              <li><a href="https://learn.sparkfun.com/tutorials/using-eagle-schematic" target="_blank">Sparkfun's EAGLE tutorial: Schematic</a></li>
+              <li><a href="https://learn.sparkfun.com/tutorials/using-eagle-board-layout" target="_blank">Sparkfun's EAGLE tutorial: Board</a></li>
+            </ul>
+            <p>(Video Tutorial)</p>
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=1AXwjZoyNno" target="_blank">Tutorial 1 for Eagle: Schematic Design</a></li>
+              <li><a href="https://www.youtube.com/watch?v=CCTs0mNXY24" target="_blank">Tutorial 2 for Eagle: Printed Circuit Board Layout</a></li>
+              <li><a href="http://allaboutlearningandearning.blogspot.nl/2011/07/eagle-tutorial.html" target="_blank">All about learning: EAGLE Tutorial</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-film"></span>
+              Videos of Wk6
+            </h4>
+            <hr/>
+            <p>Here you can find this weeks's lectures on VIMEO:</p>
+            <p>(2016.03.02)</p>
+            <ul>
+              <li><a href="https://vimeo.com/157476225" target="_blank">Lesson 06: Electronics Design</a></li>
+            </ul>
+            <p>(2016.03.10)</p>
+            <ul>
+              <li><a href="https://vimeo.com/158367357" target="_blank">Review 06: Electronics Design</a></li>
+            </ul>
+            </br>
+            </br>
+  
+            <h4>
+              <span class="glyphicon glyphicon-check"></span>
+              Checklist for Wk6
+            </h4>
+            <hr/>
+            <h5><strong>Assignments:</strong></h5>
+            <ul>
+              <li>Redraw the echo hello-world board</li>
+              <li>add at least a button and LED with current-limiting resistor</li>
+              <li>(or design your own)</li>
+            </ul>
+            <h5><strong>Learning outcomes:</strong></h5>
+            <ul>
+              <li>Select and use software for circuit board design</li>
+              <li>Demonstrate workflows used in circuit board design</li>
+              <li></li>
+            </ul>
+            <h5><strong>Have you:</strong></h5>
+            <ul>
+              <li>Shown your process using words/images/screenshots</li>
+              <li>Explained problems and how you fixed them</li>
+              <li>Done fabbercise today</li>
+              <li>Included original design files (Eagle, KiCad, Inkscape, .cad - whatever)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">footer();</script>
+  </body>
+</html>
