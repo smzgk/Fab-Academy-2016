@@ -49,6 +49,8 @@ function navigation(){
     html += '<li><a href="/archives/2016/fablabamsterdam/students/205/assignments/wk05.html">Wk05: 3D PRINTING AND SCANNING</a></li>';
     html += '<li><a href="/archives/2016/fablabamsterdam/students/205/assignments/wk06.html">Wk06: ELECTRONICS DESIGN (WEEK 1 OF 2)</a></li>';
     html += '<li><a href="/archives/2016/fablabamsterdam/students/205/assignments/wk07.html">Wk07: COMPUTER-CONTROLLED MACHINING</a></li>';
+    html += '<li><a href="/archives/2016/fablabamsterdam/students/205/assignments/wk08.html">Wk08: EMBEDDED PROGRAMING (WEEK 2 OF 2)</a></li>';
+
 
     html += '<li><a href="#">Coming soon</a></li>';
     html += '</ul>';
