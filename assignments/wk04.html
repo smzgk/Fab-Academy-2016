@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- temporary -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/template.js"></script>
+
+    <script type="text/javascript" src="/archives/2016/fablabamsterdam/students/205/js/template.js"></script>
+    <script type="text/javascript">header();</script>
+  </head>
+
+  <body>
+    <script type="text/javascript">navigation();</script>
+
+    <div class="script">
+      <div class="container">
+        <div class="page-header">
+          <h1><small>Wk04: 2016/02/16</small></h1>
+          <h2>ELECTRONICS PRODUCTION</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9">
+            <h3>0. Assignments for week4</h3>
+            <hr/>
+            <div class="lead">
+              <p>The assignments for week4 were as below;</p>
+              <ol>
+                <li>Make the Fab (tiny)ISP in-circuit programmer
+                  <ul>
+                    <li>Mill the board</li>
+                    <li>Solder the components on the board</li>
+                    <li>Set it up for programming</li>
+                  </ul>
+                </li>              
+              </ol>
+            </div>
+            </br>
+
+            <h3>1. Basic Information</h3>
+            <hr/>
+            <div class="lead">
+              <p><strong>PCB fabrication</strong></p>
+              <p>
+                In week4, we tackled printed circuit board (PCB) fabrication, which is one of basic methods of electronics production.<br>
+                <br>
+
+                <div class="small_image">
+                  <img src="../img/wk04/wk04_04_pcb.png" height="334" width="401">
+                </div>
+                <p class="text-center">Printed Circuit Board</p>
+
+                <br>
+                PCB mechanically supports and electrically connects electronic components using conductive tracks, pads and other features etched from copper sheets laminated onto a non-conductive substrate. PCBs can be single sided (one copper layer), double sided (two copper layers) or multi-layer (outer and inner layers)
+              </p>
+              <br>
+              <p><strong>What is Fab ISP?</strong></p>
+              <p>
+                The <a href="http://archive.fabacademy.org/archives/2016/doc/electronics_production_FabISP.html" target="_blank">Fab ISP</a> is an in-system programmer for AVR microcontrollers, designed for production within a FabLab. It allows us to program the microcontrollers on other boards we make.<br>
+                <br>
+
+                <div class="small_image">
+                  <img src="../img/wk04/wk04_01_micon.png" height="235" width="290">
+                </div>
+                <p class="text-center">Microcontroller</p>
+
+                <br>
+                ...however, it was Greek to me, sinche electronics production was totally new to me. I add some basic explanation regarding these concepts as below;
+
+                <div class="bs-callout bs-callout-info">
+                  <h4>Microcontroller</h4>    
+                    <p>
+                      Siting from <a href="http://internetofthingsagenda.techtarget.com/definition/microcontroller" target="_blank">IoT Agenda - microcontroller</a>,
+                      <blockquote>
+                        A microcontroller is a compact microcomputer designed to govern the operation of embedded systems in motor vehicles, robots, office machines, complex medical devices, mobile radio transceivers, vending machines, home appliances, and various other devices.
+                      </blockquote>
+                    </p>
+
+                  <h4>Microcomputer</h4>    
+                    <p>
+                      Siting from <a href="http://internetofthingsagenda.techtarget.com/definition/microcomputer" target="_blank">IoT Agenda - microcomputer</a>,
+                      <blockquote>
+                        A microcomputer is a complete computer on a smaller scale and is generally a synonym for the more common term, personal computer or PC , a computer designed for an individual. A microcomputer contains;<br>
+                        <ul>
+                          <li>microprocessor (a central processing unit on a microchip )</li>
+                          <li>memory in the form of read-only memory and random access memory</li>
+                          <li>I/O ports</li>
+                          <li>bus or system of interconnecting wires</li>
+                        </ul> 
+                        and housed in a unit that is usually called a motherboard .
+                      </blockquote>
+                    </p>
+
+                  <h4>AVR Microcontroller</h4>
+                  <p>
+                    AVR Microcontroller is a kind of microcontroller, which was developed and manufactured by Atmel. Most computers have a 32/64-bit CPU running at 1GHz, with 1GB of RAM and 100 GB of storage. This microcontroller runs at 10MHz, have 1KB of RAM and 10KB of storage. However, their small size, lower power consumption and low cost make them a wide range of choices for many projects.
+                  </p>
+                  </p>
+                </div>
+              </p>
+              <br>
+              <p><strong>CNC Milling</strong></p>
+              <p>
+                We used computer numerical controlled(CNC) milling machine: <a href="http://fablab.waag.org/machine/small-milling-machine" target="_blank">Roland Modela MDX-20</a> to mill the cupper board this week. 
+
+                <div class="small_image">
+                  <img src="../img/wk04/wk04_03_milling.png" height="253" width="246">
+                </div>
+                <p class="text-center">CNC Milling Machine</p>
+
+                <br>
+                CNC milling is a specific form of computer numerical controlled (CNC) machining. Milling itself is a machining process similar to both drilling and cutting, and able to achieve many of the operations performed by cutting and drilling machines. Like drilling, milling uses a rotating cylindrical cutting tool.
+              </p>
+            </div>
+            </br>
+            </br>
+
+            <h3>2. Practice</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                This week, we tried to make <a href="http://archive.fabacademy.org/archives/2016/doc/FabTinyIsp/index.html">FabTiny ISP</a>, which is a kind of Fab ISP and includes a few extra features such as a target power led and switch, a reset button and a led on the SCK line to indicate communication in progress. I discribe the fabricating process as below;
+                <div class="small_image">
+                  <img src="../img/wk04/wk04_02_fabtiny.png" height="165" width="500">
+                </div>
+                <p class="text-center">FabTiny ISP</p>
+              </p>
+              <p><strong>1. Milling the Board</strong></p>
+              <p>
+                <ol>
+                  <li>Set copper board<br>
+                    Turn the machine on, and fasten the board with the special double tape provided without dust underneath. If there is double tapes, which was pasted previously, on the surfase, strip them off completely before pasting new double tape.<br>
+                    <br>
+                    <div class="small_image">
+                      <img src="../img/wk04/wk04_05_prepare.png" height="308" width="473">
+                    </div>
+                    <p class="text-center">Making the surfase of board clean</p>
+                  </li>
+                  <li>Set Fab Module<br>
+                    Next prepare the 2D milling plan on PC. First, open <a href="http://kokompe.cba.mit.edu/" target="_blank">Fab Module</a> and;
+                    <ul>
+                      <li>Open milling image on Fab Module<br>
+                        Open Fabmodule and select these setting as below:
+                        <ul>
+                          <li>Input Format: image(.png)</li>
+                          <li>Output Format: Roland Mill(.rml)</li>
+                          <li>Process: PCB trance(1/64) or PCB outline(1/32)</li>
+                        </ul>
+                        <br>
+                        <div class="small_image">
+                          <img src="../img/wk04/wk04_06_set.png" height="236" width="550">
+                        </div>                        
+                        <p class="text-center">Fab Module</p>
+                      </li>
+                      <li>Set parameter<br>
+                        Next set parameter on Fab Module, which is the most important part, as below.
+                        <table class="table">
+                          <thead>
+                            <th>Parameter</th>
+                            <th>Trace</th>
+                            <th>Outline</th>
+                          </thead>
+                          <tr>
+                            <td><code>diameter</code></td>
+                            <td>0.4</td>
+                            <td>0.79</td>
+                          </tr>
+                          <tr>
+                            <td><code>offset</code></td>
+                            <td>-1</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td><code>error</code></td>
+                            <td>1.1</td>
+                            <td>1.1</td>
+                          </tr>
+                          <tr>
+                            <td><code>overlap</code></td>
+                            <td>0.5</td>
+                            <td>0.5</td>
+                          </tr>
+                          <tr>
+                            <td><code>z(mm)</code></td>
+                            <td>-0.1</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <td><code>top z</code></td>
+                            <td>-</td>
+                            <td>-0.6</td>
+                          </tr>
+                          <tr>
+                            <td><code>bottom z</code></td>
+                            <td>-</td>
+                            <td>-1.7</td>
+                          </tr>
+                          <tr>
+                            <td><code>cut depth</pre></td>
+                            <td>-</td>
+                            <td>0.6</td>
+                          </tr>
+                          <tr>
+                        </table>
+                      </li>
+
+                      <li>Set cutting plan by vector image<br>
+                        Next, download correct milling plan of image and import to Fab Module.<br>
+                        <br>
+                        <div class="small_image">
+                          <img src="../img/wk04/wk04_08_img.png" height="264" width="379">
+                        </div>                        
+                        <p class="text-center">Importing milling image</p>
+                      </li>
+                    </ul> 
+                  </li>
+                  <li>Prepare Milling Machine<br>
+                    <ul>
+                      <li>Change a milling bit<br>
+                        Set the correct milling bit in as image below. First, use 1/64 to engrave the board, and use 1/32 when you cut the outline.<br>
+                        <br>
+                        <div class="small_image">
+                          <img src="../img/wk04/wk04_07_head.png" height="577" width="442">
+                        </div>                        
+                        <p class="text-center">Changing a milling bit</p>
+                      </li>
+
+                      <li>Set the height of a milling bit<br>
+                        In this step, be careful allow the machine move without problems. Fitst, put the bit down to the ground and fix it tightly.
+                      </li>
+                      <li>Set the postion of cutting zero point from Fab Modules<br>
+                        Move the postion of bit and set it at starting point. Zero point is an absolute position in the lower left corner. We need to play with the X and Y values to find where we want to start.
+                      </li>
+
+                    </ul>
+
+                  </li>
+                  <li>Milling circuit board<br>
+                    After all setting, we can start mill, however, before starting all the milling process, once stop the machine and check if it is going correctly or NOT.
+                    <div class="screenshot">
+                      <img src="../img/wk04/wk04_09_cutting.png" height="457" width="667">
+                    </div>                        
+                    <p class="text-center">Milling Scene</p>
+                    <div class="screenshot">
+                      <img src="../img/wk04/wk04_10_fin.png" height="328" width="619">
+                    </div>                        
+                    <p class="text-center">Milled copper board</p>
+                  </li>
+                  <p><strong>Frequent Mistake!</strong></p>
+                  <p>
+                    If you set the parameter of Fab Module incorrectly, or set the position of the bin wrongly, the milling will not be executed completely; some copper will remain on the surfase without milling or board will not be cut as below. Actually, I had mistakes three times because the setting of the bin was too low to move smoothly. 
+                  </p>
+                  <div class="screenshot">
+                    <img src="../img/wk04/wk04_11_mis.png" height="439" width="648">
+                  </div>                        
+                  <p class="text-center">Copper cut not enough</p>
+                </ol>
+              </p>
+              <br>
+              <br>
+
+              <p><strong>2. Solder the components on the board</strong></p>
+              <p>
+                Now, we could prepare the circuit board for FabTiny ISP, and next have to soleder and fix the parts to the board. Image as below is the blue print of it, and solder them as following instructions.<br>
+                <br>
+
+                <div class="small_image">
+                  <img src="../img/wk04/FabISPKeyPartsLayout.svg" height="439" width="648">
+                </div>
+                <p class="text-center"><a href="../img/wk04/FabISPKeyPartsLayout.svg" target="_blank">Download SVG</a></p>                        
+
+                <br>
+                <ol>
+                  <li>Prepare parts<br>
+                    Before starting soldering, prepare the parts which will be implemented to the board from your inventory. After thenm solder the components to the board using a soldering iron and solder. Use the handy copper wire to desolder.<br>
+                    <br>
+                    First, prepare the components as following inventory list.<br>
+                    <br>
+                    <p class="text-center">Bill of FabTiny ISP</p>
+                    <TABLE class="table table-bordered table-striped" style="text-align: center">
+                      <TR>
+                        <TH ROWSPAN="2"> Part
+                        <TH COLSPAN="2"> Value
+                        <TH ROWSPAN="2"> Package
+                      <TR>
+                        <TH> inventory
+                        <TH> ideal
+                      <TR>
+                        <TD> R1
+                        <TD> 1 Kilo-Ohm
+                        <TD ROWSPAN="2"> 2.2 Kilo-Ohm
+                        <TD> SMD-1206
+                      <TR>
+                        <TD> R2
+                        <TD> 1 Kilo-Ohm
+                        <TD> SMD-1206
+                      <TR>
+                        <TD> D1
+                        <TD> 3.3-Volt Zener
+                        <TD> 3.6-Volt Zener
+                        <TD> SMD-SOD123
+                      <TR>
+                        <TD> D2
+                        <TD> 3.3-Volt Zener
+                        <TD> 3.6-Volt Zener
+                        <TD> SMD-SOD123
+                      <TR>
+                        <TD> C1
+                        <TD COLSPAN="2"> 10 micro-Farad
+                        <TD> SMD-1206
+                      <TR>
+                        <TD> R3
+                        <TD> 49 Ohm
+                        <TD> 68 Ohm
+                        <TD> SMD-1206
+                      <TR>
+                        <TD> R4
+                        <TD> 49 Ohm
+                        <TD> 68 Ohm
+                        <TD> SMD-1206
+                      <TR>
+                        <TD> R7<sup>*</sup>
+                        <TD> 0 Ohm
+                        <TD> PTC 0.5 Ampere
+                        <TD> SMD-1206
+                      <TR>
+                        <TD> C2
+                        <TD COLSPAN="2"> 100 nano-Farad
+                        <TD> SMD-1206
+                      <TR>
+                        <TD> IC1
+                        <TD> ATTiny45
+                        <TD> ATTiny85
+                        <TD> SMD-SOIC8
+                      <TR>
+                        <TD> JP1
+                        <TD> 2x6 ISP
+                        <TD> 2x8 header
+                        <TD> SMD pinheader 
+                      <TR>
+                        <TD> S2
+                        <TD COLSPAN="2"> B3SN-3112
+                        <TD> SMD tactile switch
+                      <TR>
+                        <TD> S1
+                        <TD COLSPAN="2"> AYZ0102AGRLC
+                        <TD> SMD slide switch
+                      <TR>
+                        <TD> R5
+                        <TD COLSPAN="2"> 1 Kilo-Ohm
+                        <TD> SMD-1206
+                      <TR>
+                        <TD> LED1
+                        <TD COLSPAN="2"> red LED
+                        <TD> SMD-1206
+                      <TR>
+                        <TD> R6
+                        <TD> 499 Ohm
+                        <TD> 470 Ohm
+                        <TD> SMD-1206
+                      <TR>
+                        <TD> LED2
+                        <TD COLSPAN="2"> green LED
+                        <TD> SMD-1206
+                    </TABLE>
+                    <br>
+                    ...Oh, however, it was hard for me to understand "Reference designator", which I didn't even call so, then I googled the definion of each parts as below. If you want to know further, 
+                    <a href="https://en.wikipedia.org/wiki/Reference_designator" target="_blank">Wikipedia - Reference designator</a> is easy to understand and useful for you.<br>
+                    <br>
+
+                    <table class="table">
+                      <thead>
+                        <th>Designator</th>
+                        <th>Component Type</th>
+                        <th>Note</th>
+                      </thead>
+                      <tr>
+                        <td><code>R</code></td>
+                        <td>Register</td>
+                        <td>Acting to current flow, and, at the same time, to lower voltage levels within circuits</td>
+                      </tr>
+                      <tr>
+                        <td><code>D</code></td>
+                        <td>Diode</td>
+                        <td>Having low (ideally zero) resistance to the flow of current in one direction, and high (ideally infinite) resistance in the other.</td>
+                      </tr>
+                      <tr>
+                        <td><code>C</code></td>
+                        <td>Capacitor/Condenser</td>
+                        <td>Used to store electrical energy temporarily in an electric field</td>
+                      </tr>
+                      <tr>
+                        <td><code>IC</code></td>
+                        <td>Integrated circuit</td>
+                        <td>a set of electronic circuits on one furtehr smaller plate</td>
+                      </tr>
+                      <tr>
+                        <td><code>JP</code></td>
+                        <td>Jumper</td>
+                        <td>a short length of conductor used to close a break in or open, or bypass part</td>
+                      </tr>
+                      <tr>
+                        <td><code>S</code></td>
+                        <td>Switch</td>
+                        <td>just swich</td>
+                      </tr>
+                      <tr>
+                        <td><code>LED</code></td>
+                        <td>Light-emitting diode</td>
+                        <td>a p-n junction diode, which emits light when activated</td>
+                      </tr>
+                    </table>
+                    <br>
+                    Next, pick these components from the inventory, and arrange them not to lose sight of them. It is better put them on a white paper or electric parts pack, and add tag indicating what it is to them.
+
+
+                    <div class="screenshot">
+                      <img src="../img/wk04/wk04_12_parts.png" height="439" width="648">
+                    </div>                        
+                    <p class="text-center">Preparation of parts</p>
+                  </li>
+
+
+                  <li>Solderling<br>
+                    Next, solder each components to the board carefully. Regarding the soldering step, follow the instrucitons and proccess of <a href="http://archive.fabacademy.org/archives/2016/doc/FabTinyIsp/stuffing.html" target="_blank">this page: FabTiny ISP Stuffing the board</a><br>.
+                    <br>
+
+                    <table class="table">
+                      <tr>
+                        <td>
+                          <div class="small_image">
+                            <img src="../img/wk04/wk04_13_work.png" height="220" width="324">
+                          </div>                        
+                        </td>
+                        <td>
+                          <div class="small_image">
+                            <img src="../img/wk04/wk04_14_work2.JPG" height="220" width="324">
+                          </div>                        
+                        </td>
+                      </tr>
+                    </table>
+                    <p class="text-center">Soldeling scene</p>
+
+                  </li>
+                  <li>Debugging<br>
+                    After soldering, debug using <code>multimeter</code>, which is an instrument designed to measure electric current, voltage, and usually resistance, typically over several ranges of value.<br>
+                    <br>
+                    Put its bins on the surfase of copper board, and check if there are error or NOT by the beeping which rings when the circuit is soldered to wrong parts and connected with each other wrongly.<br>
+                    <br>
+
+                    <div class="small_image">
+                      <img src="../img/wk04/wk04_15_meter.png" height="444" width="444">
+                    </div>                        
+                    <p class="text-center">Multimeter</p>
+
+                    <br>
+                    If there are no error in debuggin, you can complete the soldering part, and the image as below is a complete version of FabTiny ISP.<br>
+                    <br>
+
+                    <div class="screenshot">
+                      <img src="../img/wk04/wk04_16_fin.png" height="329" width="608">
+                    </div>                        
+                    <p class="text-center">Production of FabTiny ISP</p>
+
+                  </li>
+                </ol>
+              </p>
+              <br>
+              <br>
+
+              <p><strong>3. Set the board up for programming</strong></p>
+              <p>
+                To be able to program the microcontroller we need to set a starting program on the chip. That allows us to communicate with it.<br>
+                <br>
+                That can be done with a AVR programmer, for instance, Arduino UNO, which can be bought off the shelf but it can also be done with another FabTiny ISP which has been programmed already.<br>
+                <br>
+                I followed the programming instruction given on <a href="http://archive.fabacademy.org/archives/2016/doc/FabTinyIsp/programming.html" target="_blank">the tutorial page: Programming the firmware</a>.<br>
+                <br>
+
+                <ol>
+                  <li>Download<br>
+                    First, download neccessary files to your working directory from links below:
+                    <ul>
+                      <li><a href="http://archive.fabacademy.org/archives/2016/doc/programming_FabISP.html" target="_blank">Fab ISP programming firmware</a></li>
+                      <li><a href="https://www.obdev.at/products/crosspack/index.html" target="_blank">CrossPack for AVR Development</a></li>
+                    </ul>
+                    <br>
+                    Also, before implementing the programm to your FabTiny ISP, you have to set the PATH following the directions of <a href="http://www.ladyada.net/learn/avr/setup-mac.html" target="_blank">this page: AVR Setup: how to install AVR dev tools</a>.<br>
+                    <br>
+                    In my case, I usually use Z-shell(zsh) as general shell, so it made me a bit confusing and took some time to fix the problems. Before using the AVR firmware, you have to set the PATH to your shell to use the command of AVR.<br>
+                    <br>
+                    How to set the path to bash/etc is as below, and if you use zsh, you have to open <code>.zshenv</code> and add PATH to the file.<br>
+                    <br>
+                    <p class="text-center"><a href="http://www.ladyada.net/learn/avr/setup-mac.html" target="_blank">How to setup the path</a></p>
+                    <blockquote>
+                      In the new Terminal window, type in echo <code>$SHELL</code> and press return.<br>
+                      <br>
+                      If the output is <code>/bin/bash</code> then type the following command:<br> 
+                      <code>echo 'PATH=$PATH:/usr/local/bin' >> ~/.bash_profile</code><br> 
+                      all on one line. Press return.<br>
+                      <br>
+                      If the output is <code>/bin/csh</code> or <code>/bin/tcsh</code> then type the following command:<br>
+                      <code>echo 'set path = ($path /usr/local/bin)' >> ~/.cshrc</code><br>
+                      all on one line. Press return.<br>
+                      <br>
+                      Close any Terminal windows and open up a new one. This makes sure the <code>.bash_profile</code> or <code>.cshrc</code> is reloaded. Now type in <code>echo $PATH</code> (for bash) or <code>echo $path</code> (for t/csh) you should get something.<br>
+                      <br>
+                      The important thing is that at the end of the line is <code>/usr/local/bin</code>
+                    </blockquote>
+                  </li>
+                  <li>Programming<br>
+                    After all setting, you can implement programming on your FabTiny ISP by using another FabTiny ISP.
+
+                    <div class="small_image">
+                      <img src="../img/wk04/wk04_17_install.png" height="357" width="477">
+                    </div>                        
+                    <p class="text-center">Programming by FabTiny ISP</p>
+
+                  </li>
+                </ol>
+              </p>
+              <br>
+
+            </div>
+            </br>
+          </div>
+
+          <!-- right-side -->
+          <div class="col-md-3">
+            <h4>
+              <span class="glyphicon glyphicon-th-list"></span>
+              Outline of this page
+            </h4>
+            <hr/>
+            <p>
+              1. Basic Information<br>
+              2. Practice<br>
+              &nbsp&nbsp - milling the board<br>
+              &nbsp&nbsp - soldeling components<br>
+              &nbsp&nbsp - programming<br>
+            </p>
+            </br>
+            </br>
+
+<!--
+            <h4>
+              <span class="glyphicon glyphicon-download-alt"></span>
+              Download output of Wk4
+            </h4>
+            <hr/>
+            <p>Here are my output files for week3:</p>
+            <ul>
+              <li><a href="" target="_blank">xxxxx.SVG</a></li>
+              <li><a href="" target="_blank">xxxxx.IGES</a></li>
+            </ul>
+            </br>
+            </br>
+-->
+
+            <h4>
+              <span class="glyphicon glyphicon-file"></span>
+              Lecture Material for Wk4
+            </h4>
+            <hr/>
+            <p><strong>Lecture Note</strong></p>
+            <ul>
+              <li><a href="http://academy.cba.mit.edu/classes/electronics_production/index.html" target="_blank">Electronics Production</a></li>
+            </ul>
+            <p><strong>Tools</strong></p>
+            <ul>
+              <li><a href="http://fablab.waag.org/machine/small-milling-machine" target="_blank">CNC milling machine: Roland Modela MDX-20</a></li>
+              <li><a href="http://kokompe.cba.mit.edu/" target="_blank">Fab Module</a></li>
+              <li>Solder bar</li>
+              <li>Multimeter</li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/FabTinyIsp/index.html" target="_blank">FabTiny ISP</a></li>
+              <li>Fab ISP firmware:<br>
+                Download from <a href="http://archive.fabacademy.org/archives/2016/doc/programming_FabISP.html" target="_blank">this page</a>
+              </li>
+              <li><a href="https://www.obdev.at/products/crosspack/index.html" target="_blank">CrossPack for AVR Development</a></li>
+            </ul>
+
+            <p><strong>Learning Support</strong></p>
+            (Tutorial of this class)
+            <ul>
+              <li>
+                <a href="http://archive.fabacademy.org/archives/2016/doc/FabTinyIsp/index.html" target="_blank">FabTiny ISP:</a><br> Tutorial of making FabTiny ISP
+              </li>
+              <li>
+                <a href="http://www.fabacademy.org/archives/2014/tutorials/providence/FabISPKeyPartsLayout.svg" target="_blank">Fab ISP Key Parts Layout:</a>
+                <br>
+                This is to accompany Andy Bardagjy's version in "USB key" which is <a href="http://fab.cba.mit.edu/content/projects/fabispkey/index.html">version 2.3</a>
+              </li>
+            </ul>
+
+            (Other material)
+            <ul>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/millingPCBs.html" target="_blank">Using the Modela to Mill PCBs</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/electronics_production_FabISP.html" target="_blank">Fab ISP: Electronics Production</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/programming_FabISP.html" target="_blank">Fab ISP: Programming</a></li>
+
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/fuses.html" target="_blank">Attiny44A Fuses</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/arduinoisp.html" target="_blank">Use an Arduino UNO as an ISP to program your first FabISP</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/fiber-laser-cutting-pcb.html" target="_blank">Making PCBs with a CO2/Fiber laser cutter (Trotec)</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/fabispbase.html" target="_blank">Fab ISP: Usb 3d printed adapter</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-film"></span>
+              Videos of Wk4
+            </h4>
+            <hr/>
+            <p>Here you can find this weeks's lectures on VIMEO:</p>
+            <p>(2016.02.17)</p>
+            <ul>
+              <li><a href="https://vimeo.com/155713990" target="_blank">Lesson-04: Electronics Production</a></li>
+            </ul>
+            <p>(2016.02.24)</p>
+            <ul>
+              <li><a href="https://vimeo.com/156590677" target="_blank">Review-04: Electronics Production</a></li>
+            </ul>
+            </br>
+            </br>
+            <h4>
+              <span class="glyphicon glyphicon-check"></span>
+              Checklist for Wk4
+            </h4>
+            <hr/>
+            <h5><strong>Assignments:</strong></h5>
+            <ul>
+              <li>Make the Fab (tiny)ISP in-circuit programmer.</li>
+            </ul>
+            <h5><strong>Learning outcomes:</strong></h5>
+            <ul>
+              <li>Describe the process of production</li>
+              <li>Demonstrate correct workflows and identify areas for improvement if required</li>
+            </ul>
+            <h5><strong>Have you:</strong></h5>
+            <ul>
+              <li>Shown how you made the board</li>
+              <li>Explained any problems and how you fixed them</li>
+              <li>Included a ‘hero shot’ of your board</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">footer();</script>
+  </bodsy>
+</html>

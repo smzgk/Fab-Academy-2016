@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- temporary -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/template.js"></script>
+
+    <script type="text/javascript" src="/archives/2016/fablabamsterdam/students/205/js/template.js"></script>
+    <script type="text/javascript">header();</script>
+  </head>
+
+  <body>
+    <script type="text/javascript">navigation();</script>
+
+    <div class="script">
+      <div class="container">
+        <div class="page-header">
+          <h1><small>Wk2: 2016/02/03</small></h1>
+          <h2>COMPUTER-AIDED DESIGN</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9">
+            <h3>0. Assignments for week2</h3>
+            <hr/>
+            <div class="lead">
+              <p>The assignments for week2 were as below;</p>
+              <ol>
+                <li>Model (draw, render, animate, simulate, ...) a possible final project</li>
+                <li>Post it on your class page with original 2D and 3D files.</li>              
+              </ol>
+            </div>
+            </br>
+
+            <h3>1. 2D and 2.5D design</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                At the week2 lecture, Prof. Niel explained and introduced us basic concepts of Computer-Aided Design(CAD) and differences of each as following;
+              </p>
+              <br>
+              <p><strong>2D VS 2.5D</strong></p>
+              <ul>
+                <li><strong>2D(two-dimensional)</strong>
+                  <P>
+                    literally, mostly two-dimensional models (such as 2D geometric models, text, and digital images)
+                  </p>
+                </li>
+                <li><strong>2.5D(two-and-a-half-dimensional)</strong>
+                  <P>
+                    a term used to describe either 2D graphical projections and similar techniques used to cause a series of images to simulate the appearance of being three-dimensional (3D) when in fact they are not. <br>
+                    <br>
+                    For instance, video games that is restricted to a two-dimensional plane or has a virtual camera with a fixed angle. By contrast, games using 3D computer graphics without such restrictions are said to use true 3D.
+                  </p>
+                  <div class="screenshot">
+                    <img src="../img/wk02/wk02_2-5d.png">
+                  </div>
+                  <p class="text-center">View of 2.5D video game</p>
+                </li>
+              </ul>
+              <br>
+
+              <p><strong>Raster and Vector</strong></p>
+              <p>Regarding the difference between Raster and Vector, <a href="http://vector-conversions.com/vectorizing/raster_vs_vector.html" target="_blank">this website(Raster vs Vector)</a> explaines the concepts easily.</p>
+              <ul>
+                <li><strong>Raster(or Bitmap)</strong>
+                  <P>
+                    Raster images are made of pixels. A pixel is a single point or the smallest single element in a display device. The use of different color pixels allows for smooth blends of colors.<br>
+                    <br>
+                    <u>Advantages</u>
+                    <ul>
+                      <li>Can represent and edit photo and photo-like elements better than vector programs.</li>
+                    </ul>
+                    <u>Disadvantages </u>
+                    <ul>
+                      <li>Is bound by the number of pixels in the image. It cannot be scaled up without losing quality.</li>
+                      <li>Large dimensions & detailed images equal large file size.</li>
+                      <li>If raster images are complex, conversion to vector may take so much time.</li>
+                    </ul>
+                    <br>
+                    <u>Tools</u><br>
+                    Major free and open-source raster graphics editor is <a href="http://www.gimp.org/" target="_blank">GIMP</a>, and <a href="http://www.adobe.com/nl/products/photoshop.html" target="_blank">Adobe Photoshop</a> is also famous as maijor commercial editor used by widespread people.<br>
+                  </p>
+                </li>
+                <br>
+                <li><strong>Vector</strong>
+                  <P>
+                    Vector images are  Made of mathematical calculations that form objects and lines.<br>
+                    <br>
+                    <u>Advantages</u>
+                    <ul>
+                      <li>Resolution-independent: Can be printed and scales at any size/resolution without losing quality.</li>
+                      <li>A large dimension vector graphic can maintain a small file size.</li>
+                      <li>Can be easily converted to raster</li>
+                      <li>Vector is required by many service providers(Design, digital fabrication tools and etc).</li>
+                    </ul>
+                    <u>Disadvantages </u>
+                    <ul>
+                      <li>It is not the best format for photographs or photo-like elements with blends of color.</li>
+                    </ul>
+                    <br>
+                    <u>Tools</u><br>
+                    To make and edit vector images, <a href="https://inkscape.org/en/" target="_blank">Inkscape</a> is popular open-sourse editor, and <a href="http://www.adobe.com/nl/products/illustrator.html" target="_blank">Adobe Illustrator</a> is also famous as maijor commercial editor.<br>                    
+                  </p>
+                </li>
+              <div class="screenshot">
+                <img src="../img/wk02/wk02_vector_vs_raster.gif" height="300" width="500">
+              </div>
+              <p class="text-center">Difference between Vector and Raster by <a href="http://www.webcoursesbangkok.com/blog/whats-the-difference-between-vector-and-raster-images/" target="_blank">WEB COURCES BANGKO</a></p>            
+              </ul>
+            </div>
+            </br>
+            </br>
+
+            <h3>2. 3D design</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                Next, we learned different types of and approaches to 3D design as below. Though it was interesting, it was tough for me to understand these concepts from scratch because I am totally outsider in field of solid modeling. I tried to understand them by googling and refering website of past and other stuedents of Fab Academy.
+              </p>
+              <br>
+              <ul>
+                <p>First, there are several ways to model solid objects such as;</p>
+                <ul>
+                  <li><strong>CSG(Constructive Solid Geometry)</strong></li>
+                    <P>
+                      modelling by combining objects using boolean operations<br>
+                      <div class="bs-callout bs-callout-info">
+                        <h4>Boolean</h4>
+                        <p>
+                          or boolean logic, is a subset of algebra used for creating true/false statements. Boolean expressions use the operators AND, OR, XOR, and NOT to compare values and return a true or false result.
+                        </p>
+                        <h4>Boolean operations on polygons</h4>
+                        <p>
+                          is a set of Boolean logics (AND, OR, NOT, XOR, ...) operating on one or more sets of polygons in computer graphics. These sets of operations are widely used in computer graphics, CAD, and in EDA (in integrated circuit physical design and verification software).
+                        </p>
+                      </div>
+                    </p>
+                  </li>
+                  <li><strong>Hierarchical modelling</strong>
+                    <p>
+                      modeling using hierachical relations, like parent and child relation between some objects.
+                    </p>
+                  <li><strong>Parametric modelling</strong>
+                    <p>
+                      modeling and changing parts by changing their parameters
+                    </p>
+                  </li>
+                  <li><strong>Procedural modelling</strong>
+                    <p>
+                      creating a model from a rule set, like fractals
+                    </p>
+                  </li>
+                </ul>
+                <br>
+
+                <p>Also, there are two methods for representing shapes such as:</p>
+                <ul>
+                  <li><strong>Boundary representations(B-rep)</strong>
+                    <P>
+                      Boundary representation is a method for representing shapes using the limits in solid modeling and computer-aided design. A solid is represented as a collection of connected surface elements, the boundary between solid and non-solid.
+                    </p>
+                  </li>
+                  <li><strong>Function representations(f-rep)</strong>
+                    <p>
+                      a solid object defined by function of point coordinates. Points with which the function generates a positive outcome belong to the object and points with which the function generates a negative outcome do not belong/are outside the object. If the function equals 0 this describes an isosurface) representations
+                    </p>
+                  </li>
+                </ul>
+                <br>
+
+                <p>In terms of oparating software, we have several approaches as below;</p>
+                <ul>
+                  <li><strong>GUIs(Graphical User Interfaces)</strong>
+                    <P>
+                      a user interface that includes graphical elements, such as windows, icons and buttons.
+                    </p>
+                  </li>
+                  <li><strong>Scripting</strong>
+                    <p>
+                      automated task sequense software
+                    </p>
+                  <li><strong>Hardware description languages</strong>
+                    <p>
+                      specialized computer language which describes the structure and behavior of electronic circuits
+                    </p>
+                  </li>
+                </ul>
+                <br>
+
+                <p>Finally, there are three ways to manipulate models as;</p>
+                <ul>
+                  <li><strong>declarative</strong>
+                    <P>
+                      like drawing by hand on paper
+                    </p>
+                  </li>
+                  <li><strong>constraint based</strong>
+                    <p>
+                      the user specifies relationships among drawing parts
+                    </p>
+                  <li><strong>optimizational</strong>
+                    <p>
+                      drawing parts are described by the outcome of a mathematical function
+                    </p>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            </br>
+
+            <h3>3. Practices</h3>
+            <hr/>
+            <div class="lead">
+              <p><strong>2D and 2.5D design - Inkscape - </strong></p>
+              <p>
+                First, I tried to practice using <a href="https://inkscape.org/en/" target="_blank">Inkscape</a>. The reason why I chose this software for vector graphic editor was because 1) I could use without paying, 2) its open source tutorial it was rich. I gave up to install Adobe Illustrator because of its cost.<br>
+                <br>
+                To learn how to use Inkscape, <a href="https://inkscape.org/en/learn/tutorials/" target="_blank">Official Tutorial</a> and <a href="https://inkscape.org/en/doc/keys091.html#d0e634" target="_blank">Keyboard and Mouse Reference</a>, which took me 2-3hours to do once was very useful. Inkscape is good at keyboard shortcut operating, so I was able to get used to use it before long time, because the usage is similar with that of Microsoft Power Point, which I have used and been familiar with for over 5 years.<br>
+                <br>
+                Though Inkscape is good at using in general, there are several bugs and bad points on Linux OS, like Mac OS, which I use. For instance, as default setting, <br>
+                <ul>
+                  <li>keyborad shortcut is mainly allocated to <code>Ctrl</code> key, which is less frequently used on Mac OS, so I changed the allocation to <code>command</code> key.</li>
+                  <li>cannot copy and paste by using keyboard shortcut appropriately</li>
+                </ul>
+                or so. Then it took around one hour to fix the bug and modify the envirnment.
+              </p>
+              <div class="screenshot">
+                <img src="../img/wk02/wk02_ink_prac.png">
+              </div>
+              <p class="text-center">Practice scene on Inkscape</p>
+
+              <div class="screenshot">
+                <img src="../img/wk02/wk02_bitmap.png">
+              </div>
+              <p class="text-center">Converting Bitmap image to Vector</p>
+              <br>
+              <p>
+                After I finished the tutorial, I drew the skech of "Remote Lock Attachment", which is one of my ideas for final project. However, what I think is the problem on this bluprint is that it is too simple to make it real, because I am totally outside in mechanisms design or so. I have to learn and make it further detailed.
+              </p>
+              <div class="small_image">
+                <img src="../img/wk02/wk02_2d_door.png" height="378" width="270">
+              </div>
+              <p class="text-center">"Remote Lock Attachment" illustrated by Inkscape<br><a href="https://www.dropbox.com/s/q1qfvsc9tzu86w6/160209_remote_lock_attachment.svg?dl=0" target="_blank">Download SVG file</a></p>
+              <br>
+
+              <p><strong>3D design - Fusion 360 -</strong></p>
+              <p>
+                This is for the first time for me to use 3D modelling software, so I have to decide which software to use first. The options ware <a href="http://www.rhino3d.com" target="_blank">Rhinoceros</a> or <a href="http://www.autodesk.com/products/fusion-360/overview" target="_blank">Fusion 360</a>, and I tried both. Considering the usability for me, I felt Fusion 360 was better for me. In addition to that, regarding the cost, I can use Fusion 360 without paying for three years as student, however, the free trial period of Rhino is only three months. Then finally I decided to use Fusion 360.<br>
+                <br>
+              </p>
+              <div class="screenshot">
+                <img src="../img/wk02/wk02_3D_tuto.png">
+              </div>
+              <p class="text-center">Tutorial on Fusion 360</p>
+              <p>
+                After I finished several trial on Fusion 360, I made the 3D model of the product of my final. Fusion 360 is also good at sharing the model on internet, so I was able to embed the model easily as below.
+              </p>
+              <div class="screenshot">
+                <img src="../img/wk02/wk02_3d_process.gif" height="777" width="1000">
+              </div>
+              <p class="text-center">Process on making the model</p>
+              <div class="small_image">
+                <iframe src="https://myhub.autodesk360.com/ue2975cc1/shares/public/SHabee1QT1a327cf2b7a17ed0bf25cea6f90?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+              </div>
+              <p class="text-center">"Remote Lock Attachment" modelled by Fusion 360<br><a href="https://www.dropbox.com/s/u63fegazyptu6tl/160210_remote_lock_attachment%20v4.iges?dl=0" target="_blank">Download IGES file</a></p>
+              <br>
+
+              <p>Also, I made 3D model of micro drone, which is second idea of my final projects as below.</p>
+
+              <div class="small_image">
+                <iframe src="https://myhub.autodesk360.com/ue2975cc1/shares/public/SHabee1QT1a327cf2b7ac6e1a47656e15430?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+              <p class="text-center">"Micro Drone" modelled by Fusion 360<br><a href="https://www.dropbox.com/s/ombano6zoxvz8e2/160215_drone%20v8.iges?dl=0" target="_blank">Download IGES file</a></p>
+              </div>
+              <br>
+              <br>
+
+              
+              <p><strong>Antinomy</strong></p>
+              <p>
+                After trying Fusion 360, I tried to use <a href="https://github.com/mkeeter/antimony" target="_blank">Antinomy</a>, which is highly parametric 3D desing software.<br>
+                <br>
+                At first, I cannot understand the system totally and use smoothly. However, after realising that it is similar to the graph/geometry in mathematical problem, which I was familiar with in my school days, I can drow and describe figures and models smoothly. Though I could not take so much time to use Antinomy, I feel like to improve my modeling skill in Antinomy. 
+              </p>
+              <br>
+              <div class="screenshot">
+                <img src="../img/wk02/wk02_antimony.png">
+              </div>
+              <p class="text-center">Modelling in Antinomy</p>
+            </div>
+            </br>
+            <br>
+          </div>
+
+          <!-- left-side -->
+          <div class="col-md-3">
+            <h4>
+              <span class="glyphicon glyphicon-th-list"></span>
+              Outline of this page
+            </h4>
+            <hr/>
+            <p>
+              1. 2D and 2.3D Modelling<br>
+              2. 3D Modelling<br>
+              3. Practice (Inkscape/Fusion 360/Antimony)<br>
+            </p>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-download-alt"></span>
+              Download output of Wk2
+            </h4>
+            <hr/>
+            <p>Here are my output files for week2:</p>
+            <ul>
+              <li><a href="https://www.dropbox.com/s/q1qfvsc9tzu86w6/160209_remote_lock_attachment.svg?dl=0" target="_blank">remote_lock_attachment.SVG</a></li>
+              <li><a href="https://www.dropbox.com/s/u63fegazyptu6tl/160210_remote_lock_attachment%20v4.iges?dl=0" target="_blank">remote_lock_attachment.IGES</a></li>
+              <li><a href="https://www.dropbox.com/s/ombano6zoxvz8e2/160215_drone%20v8.iges?dl=0" target="_blank">micro_drone.IGES</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-file"></span>
+              Lecture Material for Wk2
+            </h4>
+            <hr/>
+            <p><strong>Lecture Note</strong></p>
+            <ul>
+              <li><a href="http://academy.cba.mit.edu/classes/computer_design/index.html" target="_blank">Computer-Aided Design</a></li>
+            </ul>
+            <p><strong>Tools</strong></p>
+            <ul>
+              <li><a href="https://inkscape.org/en/" target="_blank">Inkscape</a></li>
+              <li><a href="http://www.adobe.com/nl/products/illustrator.html" target="_blank">Adobe Illustrator</a></li>
+              <li><a href="http://www.rhino3d.com" target="_blank">Rhinoceros</a></li>
+              <li><a href="http://www.autodesk.com/products/fusion-360/overview" target="_blank">Fusion 360</a></li>
+              <li><a href="https://github.com/mkeeter/antimony" target="_blank">Antinomy</a></li>
+            </ul>
+
+            <p><strong>Learning Support</strong></p>
+            <ul>
+
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/fabmodules-html5.html" target="_blank">Fab Modules (HTML5) setup</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/inkscape.html" target="_blank">2D Design Tools: Inkscape</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/3D_CAD.html" target="_blank">3D CAD: 3D Modeling Tools for Beginners</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/cad.html" target="_blank">CAD tutorials: Gimp, Inkscape, Draftsight, QCAD, Blender, FreeCAD, Rhinoceros</a></li>
+              <li><a href="https://github.com/mkeeter/antimony/blob/develop/doc/USAGE.md" target="_blank">Matt Keeter's guide to Antimony</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/antimony_tabs.html" target="_blank">Antimony Tabs</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/antimony_drag_func.html" target="_blank">Antimony UI Drag Function Example</a></li>
+              <li><a href="http://archive.fabacademy.org/archives/2016/doc/Parametric_Modeling_Antimony.html" target="_blank">Parametric Modeling of a Box Beam in Antimony</a></li>
+            </ul>
+
+            </br>
+            </br>
+          
+            <h4>
+              <span class="glyphicon glyphicon-film"></span>
+              Videos of Wk2
+            </h4>
+            <hr/>
+            <p>Here you can find this weeks's lectures on week2 on VIMEO:</p>
+            <p>(2016.02.03)</p>
+            <ul>
+              <li><a href="https://vimeo.com/154077397" target="_blank">Lesson-02: Computer-Aided Design</a></li>
+            </ul>
+            <p>(2016.02.03)</p>
+            <ul>
+              <li><a href="https://vimeo.com/155002904" target="_blank">Review 02: Computer-Aided Design</a></li>
+            </ul>
+            </br>
+            
+            <h4>
+              <span class="glyphicon glyphicon-check"></span>
+              Checklist for Wk2
+            </h4>
+            <hr/>
+            <h5><strong>Assignments:</strong></h5>
+            <ul>
+              <li>Model (draw, render, animate, simulate, ...) a possible final project</li>
+              <li>Post it on your class page with original 2D and 3D files.</li>              
+            </ul>
+            <h5><strong>Learning outcomes:</strong></h5>
+            <ul>
+              <li>Evaluate and select 2D and 3D software</li>   
+              <li>Demonstrate and describe processes used in modelling with 2D and 3D software</li>
+            </ul>
+            <h5><strong>Have you:</strong></h5>
+            <ul>
+              <li>Modelled your proposed final project in 2D and 3D software</li>
+              <li>Shown how you did it with words/images/screenshots</li>
+              <li>Included your original design files</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">footer();</script>
+  </body>
+</html>

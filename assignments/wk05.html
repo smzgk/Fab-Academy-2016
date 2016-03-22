@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- temporary -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/template.js"></script>
+
+    <script type="text/javascript" src="/archives/2016/fablabamsterdam/students/205/js/template.js"></script>
+    <script type="text/javascript">header();</script>
+
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="../media/jsc3d_ie.min.js"></script>
+    <script type="text/javascript" src="../media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="../media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="../media/jsc3d.touch.js"></script>
+
+  </head>
+
+  <body>
+    <script type="text/javascript">navigation();</script>
+
+    <div class="script">
+      <div class="container">
+        <div class="page-header">
+          <h1><small>Wk5: 2016/02/24</small></h1>
+          <h2>3D SCANNING AND PRINTING</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9">
+            <h3>0. Assignments for week5</h3>
+            <hr/>
+            <div class="lead">
+              <p>The assignments for week5 were as below;</p>
+              <ol>
+                <li>Test the design rules for your printer(s) (group project)</li>
+                <li>Design and 3D print an object (small, few cm) that could not be made subtractively</li>
+                <li>3D scan an object (and optionally print it)</li>
+              </ol>
+            </div>
+            </br>
+
+            <h3>1. Basic Information</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                XXXXXX
+              </p>
+              <br>
+              <p><strong>3D Printing</strong></p>
+              <p>
+                XXXXXX
+              </p>
+              <p><strong>3D Scanning</strong></p>
+              <p>
+                XXXXXX
+              </p>
+            </div>
+            </br>
+            </br>
+            </br>
+
+            <h3>2. Testing Design Rule</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                The first assignment of this week was group assignments, which tests design rule, possibility and limitation of 3D printing. For instance:
+                <ul>
+                  <li>How sharp a corner can you make?</li>
+                  <li>How thin a wall canyou make?</li>
+                  <li>How do the detentions you made relate to the detentions you set to the printer?</li>
+                  <li>How close a clearance can you make to release the parts to turn</li>
+                </ul>
+                <br>
+                We downloaded the printing test model from <a href="https://www.thingiverse.com/" target="_blank">Thingiverse</a>, and printed them. The software which we used for printing was <a href="https://ultimaker.com/en/products/cura-software" target="_blank">Cura</a>, which is open source priting software.
+              </p>
+              <br>
+
+              <p><strong>A) Shoot Out Test - Tower</strong></p>              
+              <p>
+                First, we printed a cylinder pyramid, which had five layered structure. As the picture of printing output below, the top os the structure was not printed clearly, because;
+                <ul>
+                <li>the printer we used, <a href="http://fablab.waag.org/machine/3d-printer-1" target="_blank">Ultimaker Original</a>, is the one of reasonable 3D printers so that it could not print detailed parts precisely.
+                  </li>
+                  <li>In addition to that, we set the size of printing object around 1cm*1cm*1cm, which was a bit small to print.
+                  </li>
+                  <li>Furthermore, priting speed; 100, was too fast to print in detail, we suggested.
+                  </li>
+                </ul>
+              </p>
+              <table style="width:100%">
+                <tr>        
+                  <td><img src="../img/wk05/test01_model.jpg" width="400"></td>
+                  <td><img src="../img/wk05/test01_print.png" width="400"></td>
+                </tr>
+              </table>
+              <p class="text-center"><a href="http://www.thingiverse.com/thing:533472" target="_blank">2015 3D Printer Shoot Out Test Model</a></p>
+              <br>
+
+              <p><strong>B) Shoot Out Test - Rook</strong></p>
+              <p>
+                Reflecting the result of previous test, we printed the Rook as below, setting the size of the object: 2cm*2cm*3cm. The output was satisfying because of the appropriate priting size and appropriate printing speed.
+              </p>
+
+              <table style="width:100%">
+                <tr>        
+                  <td><img src="../img/wk05/test02_model.jpg" width="400"></td>
+                  <td><img src="../img/wk05/test02_print.png" width="400"></td>
+                </tr>
+              </table>
+              <p class="text-center"><a href="http://www.thingiverse.com/thing:533652" target="_blank">Rook - 2015 3D Printer Shoot Out Test Model</a></p>                  
+              <br>
+
+              <p><strong>C) Tolerance Test</strong></p>
+              <p>
+                Another group working team printed tolelance test object, and the result indicated the appropriate size to print the detailed object. Looking at the top of cones of each size of models, the largest one is printed clearly compared to the others.
+              </p>
+              <table style="width:100%">
+                <tr>        
+                  <td><img src="../img/wk05/test03_model.jpg" width="400"></td>
+                  <td><img src="../img/wk05/test03_print.png" width="400"></td>
+                </tr>
+              </table>
+              <p class="text-center"><a href="http://www.thingiverse.com/thing:636363" target="_blank">3D Printer Tolerance Test Model</a></p>
+              This result shows the limitation of preciseness printing for grooves and brows. Acttually, it is difficult to print the tiny characters which we can see on the side of torelance test model, however, other parts are generally printed clearly.
+
+              <div class="screenshot">
+                <img src="../img/wk05/test03_big.png">
+              </div>
+              <p class="text-center">Largest one of the printed test objects</p>
+              <br>
+              <br>
+
+            </div>
+
+            <h3>3. Practice - 3D Printing</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                After checking the limitation of our printer, which was group assingments, I enterd the practice for designing an object (small, few cm) that could not be made subtractively.<br>
+                <br>
+                First, I researched what designs cannot be modelled subtractively as below. The image below indicates that the objects like;
+                <ul>
+                  <li>the hole and space which is totally closed</li>
+                  <li>deep grooves</li>
+                  <li>complex grooves</li>
+                </ul>
+                cannot be modelled subtractively.                
+                <div class="screenshot">
+                  <img src="../img/wk05/subtract.png">
+                </div>
+                <p class="text-center">Designs which cannot be modelled subtractively</p>
+              </p>
+              <br>
+
+              <p><strong>A) Simple Test - Grooved Cylindar</strong></p>
+              <p>
+                At the beginning, I made simple object, which the image above lists as example using <a href="http://www.autodesk.com/products/fusion-360/overview" target="_blank">Autodesk Fusion 360</a>. I drawed the model and printed it, and was able to do it without failure and mistakes thanks to the testing above.
+                <table style="width:100%">
+                  <tr>        
+                    <td><img src="../img/wk05/work.png" width="400"></td>
+                    <td><img src="../img/wk05/work1.png" width="400"></td>
+                  </tr>
+                </table>
+                <p class="text-center">Grooved Cylindar<br><a href="https://www.dropbox.com/s/wqmep1x83siue87/160226_grooved_cylinder.stl?dl=0" target="_blank">Download STL</a></p>
+              </p>
+              <br>
+
+              <p><strong>B) Sphere with wave on its surfase </strong></p>
+              <p>
+                Next, I used <a href="https://github.com/mkeeter/antimony" target="_blank">Antimony</a> to draw parametric models. To tell the truth, I would like to make the hollow polyhedoron with honny-come structure, and reasearched a bit. However, I gave up it because 1) the drawing complex parametric model by Fusion 360 was a bit diffucult for me, 2) I thought it was impossible to print the tiny structure by our 3D printer.<br>
+                <br>
+                I made a sphere with wave on its surfase as the picture below by Antimony. I drawed two spheres and subtract the space of  smaller one from the bigger sphere, then inverted wave patterns to it.
+
+                <div class="screenshot">
+                  <img src="../img/wk05/antimony_sphere.png">
+                </div>
+                <p class="text-center">Sphere with wave on its surfase on Antimony<br><a href="https://www.dropbox.com/s/5pog884bppqvjjd/20160301_sphere04.stl?dl=0" target="_blank">Download STL</a></p>
+                <br>
+
+                On printing process, I did trials and errors. In first trial, the sphere could not be printed appropriately because there are no base. Then in second trial, I set the base to the objects, however, the printing objects started to slide after reaching the certain height, so I cancelled printing.
+
+                <table style="width:100%">
+                  <tr>        
+                    <td><img src="../img/wk05/antimony_sphere1.png" width="400"></td>
+                    <td><img src="../img/wk05/antimony_sphere2.png" width="400"></td>
+                  </tr>
+                </table>
+                <p class="text-center">Printing Process</p>
+                <br>
+                Reflecting those failures, I set the big base enough fix the object during printing as below, and successfuly printed with pricise detailed. Owing to using <a href="http://printrbot.com/shop/assembled-metal-printrbot-plus/" target="_blank">Printbot Metal Plus</a>, which is higher speck 3D printer in Fablab amsterdam, I could print to detailed parts in spite of its complex design.
+
+                <div class="screenshot">
+                  <img src="../img/wk05/antimony_sphere3.png">
+                </div>
+                <p class="text-center">Sphere with wave on its surfase</p>
+              </p>
+              <br>
+
+              <p><strong>C) Pipe structured object </strong></p>
+              <p>
+                After that, I tried to make another model by Antimony as below, which was a object something like piped pattern. Thanks to Antimony, I was able to draw the pattern very easily, however, Antimony has only three patterns of dedault volume designs, so I wish there were more patterns.
+
+                <div class="screenshot">
+                  <img src="../img/wk05/antimony_pipe.png">
+                </div>
+                <p class="text-center">Pipe structured object<br><a href="https://www.dropbox.com/s/4bidu8sl1m5pa4v/20160301_pipe4.stl?dl=0" target="_blank">Download STL</a></p>
+
+                During printing process, printing stopped and I cancelled it because the printing surfase is a bit complex and not smooth, so extruder got stucked and stopped to print. So I could not finish to print as below becasue I did not have any time enough to print next trial. 
+
+                <div class="screenshot">
+                  <img src="../img/wk05/antimony_pipe1.png">
+                </div>
+                <p class="text-center">Printing result</p>
+              </p>
+     
+            </div>
+            </br>
+
+            <h3>4. Practice - 3D Scanning</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                Next assingment was trying to 3D scanning. Prof. Niel introduced us several scanning tools and we could tried several scanning methods which were open ource apps and facilities of Fablab Amsterdam.
+              </p>
+              <p><strong>A) Skanect</strong></p>
+              <p>
+                First, we tried <a href="http://skanect.occipital.com/" target="_blank">Skanect</a>, which was open source scanning software using <a href="http://www.xbox.com/en-US/xbox-one/accessories/kinect-for-xbox-one" target="_blank">Kinect</a> as scanning device. Skanect can capture a full color 3D model of an object, a person or a room.
+
+                <div class="screenshot">
+                  <img src="../img/wk05/ska1.png">
+                </div>
+                <p class="text-center"><a href="http://www.xbox.com/en-US/xbox-one/accessories/kinect-for-xbox-one" target="_blank">Kinect</a> for <a href="http://skanect.occipital.com/" target="_blank">Skanect</a></p>
+                <br>
+
+                Then we scanned our self potrait as below. It was a bit diffucult at first because we have to revolve with appropriate speed for scanning. The picture below is scanning scene in our class.
+
+                <div class="screenshot">
+                  <img src="../img/wk05/ska2.png">
+                </div>
+                <p class="text-center">Scnanning Scene in class</p>
+                <br>
+
+                After several trials, we could got understand it and successfuly scanned us as below. Though the obj file was full colored, it was banished after opening by Fusion 360 and converted OBJ file to STL file.
+
+                <div class="screenshot">
+                  <img src="../img/wk05/ska3.png">
+                </div>
+                <p class="text-center">Self portrait object by Skanect<br><a href="https://www.dropbox.com/s/qzqmju2o4q06hvs/20160301_body.obj?dl=0" target="_blank">Download OBJ</a></p>
+
+              </p>
+              <br>
+
+              <p><strong>B) 123D Catch App</strong></p>
+              <p>
+                Next, I used <a href="http://www.123dapp.com/catch" target="_blank">Autodesk 123D Catch</a>, which is open source application on smartphone enabling us to scan the object by smartphone easily. 
+
+                <div class="screenshot">
+                  <img src="../img/wk05/catch.png">
+                </div>
+                <p class="text-center"><a href="http://www.123dapp.com/catch" target="_blank">Autodesk 123D Catch</a></p>
+                <br>
+                However, differently from my expectation, it took so much time to convert taken pictures to 3D model, which was around 3-4 hours. After waiting a lot, the scanned object was generated as below. It was fortunate that it enable us to share and embed the object on website very easily.
+
+                <div class="text-center">
+                  <iframe id='embed3DViewer'  src='http://www.123dapp.com/fullpreview/embedViewer?assetId=5247014&size=medium' scrolling='no' style='border:none; width: 495px; height: 555px'> </iframe>
+                </div>
+
+              </p>
+
+              <p><strong>C) Roland Modela MDX-20</strong></p>
+              <p>
+                Next, we used <a href="http://fablab.waag.org/machine/small-milling-machine" target="_blank">CNC milling machine: Roland Modela MDX-20</a> as scannning tool. It was very surprising for me that it can be used as scanning machine. Mainly, it was used to scan very tiny object pricisely as below.
+
+                <div class="screenshot">
+                  <img src="../img/wk05/modela1.png">
+                </div>
+                <p class="text-center"><a href="http://fablab.waag.org/machine/small-milling-machine" target="_blank">CNC milling machine: Roland Modela MDX-20</a></p>
+                <br>
+                This time, we scanned FabTiny ISP, which we made just last week. We used clay to attach the scanned objects to base board as below. Because of the scanning preciseness, it took us around a half hour to scan a tiny part of FabTin ISP, which was just 1cm*1cm.
+
+                <div class="screenshot">
+                  <img src="../img/wk05/modela2.png">
+                </div>
+                <p class="text-center">Scanning scene</p>
+                <br>
+
+                As a result, the mesh was generated by the software, and we could import and edit the object to CAD software and convet the mesh to 3D modeling data.
+
+                <div class="screenshot">
+                  <img src="../img/wk05/modela3.png">
+                </div>
+                <p class="text-center">Result of scanning FabTiny ISP</p>
+              </p>
+              <br>
+
+              <p><strong>D) Sense</strong></p>
+              <p>
+                Finally, we used <a href="http://www.3dsystems.com/shop/sense" target="_blank">Sense</a>, which was the handy scanning tool as the image below. It can scan objects with color quickly. Unfortunately, I did not test this tools enough because of lack of my time.
+
+                <div class="screenshot">
+                  <img src="../img/wk05/sense.png">
+                </div>
+                <p class="text-center"><a href="http://www.3dsystems.com/shop/sense" target="_blank">Sense</a></p>
+              </p>
+                            
+            </div>
+          </div>
+
+
+
+          <!-- left-side -->
+          <div class="col-md-3">
+            <h4>
+              <span class="glyphicon glyphicon-th-list"></span>
+              Outline of this page
+            </h4>
+            <hr/>
+            <p>
+              1. Basic Information<br>
+              2. Testing Design Rule<br>
+              3. Practice - 3D Printing<br>
+              4. Practice - 3D Scanning
+            </p>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-download-alt"></span>
+              Download output of Wk5
+            </h4>
+            <hr/>
+            <p>Here are my output files for week3:</p>
+            <ul>
+              <li><a href="https://www.dropbox.com/s/wqmep1x83siue87/160226_grooved_cylinder.stl?dl=0" target="_blank">grooved_cylinder.STL</a></li>
+              <li><a href="https://www.dropbox.com/s/5pog884bppqvjjd/20160301_sphere04.stl?dl=0" target="_blank">waved_sphere.STL</a></li>
+              <li><a href="https://www.dropbox.com/s/4bidu8sl1m5pa4v/20160301_pipe4.stl?dl=0" target="_blank">piped_structure.STL</a></li>
+              <li><a href="https://www.dropbox.com/s/qzqmju2o4q06hvs/20160301_body.obj?dl=0" target="_blank">self_portrait.OBJ</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-file"></span>
+              Lecture Material for Wk5
+            </h4>
+            <hr/>
+            <p><strong>Lecture Note</strong></p>
+            <ul>
+              <li><a href="http://academy.cba.mit.edu/classes/scanning_printing/index.html" target="_blank">3D Scanning and Printing</a></li>
+            </ul>
+
+            <p><strong>Tools</strong></p>
+            <p>(3D Printing)</p>
+              
+            <ul>
+              <li><a href="http://printrbot.com/shop/assembled-metal-printrbot-plus/" target="_blank">Printbot Metal Plus</a></li>
+              <li><a href="http://fablab.waag.org/machine/3d-printer-1" target="_blank">Ultimaker Original</a></li>
+              <li><a href="https://ultimaker.com/en/products/cura-software" target="_blank">Cura</a></li>
+              <li><a href="http://www.autodesk.com/products/fusion-360/overview" target="_blank">Autodesk Fusion 360</a></li>
+              <li><a href="https://github.com/mkeeter/antimony" target="_blank">Antimony</a></li>
+              <li><a href="https://www.thingiverse.com/" target="_blank">Thingiverse</a></li>
+            </ul>
+
+            <p>(3D Scanning)</p>
+            <ul>
+
+              <li><a href="http://skanect.occipital.com/" target="_blank">Skanect</a></li>
+              <li><a href="http://www.xbox.com/en-US/xbox-one/accessories/kinect-for-xbox-one" target="_blank">Kinect</a></li>
+              <li><a href="http://www.3dsystems.com/shop/sense" target="_blank">Sense</a></li>
+              <li><a href="http://www.123dapp.com/catch" target="_blank">Autodesk 123D Catch</a></li>
+              <li><a href="http://fablab.waag.org/machine/small-milling-machine" target="_blank">CNC milling machine: Roland Modela MDX-20</a></li>
+
+            </ul>
+            <p><strong>Learning Support</strong></p>
+            <ul>
+              <li><a href="http://fabacademy.org/archives/2015/doc/3Dprintscan-milan.html" target="_blank">3D Printing and 3D Scanning lecture</a></li>
+              <li><a href="http://fabacademy.org/archives/2015/doc/3D_scanning.html" target="_blank">3D Scanning</a></li>
+              <li><a href="http://fabacademy.org/archives/2015/doc/3D_printing.html" target="_blank">3D Printing</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-film"></span>
+              Videos of Wk5
+            </h4>
+            <hr/>
+            <p>Here you can find this weeks's lectures on VIMEO:</p>
+            <p>(2016.02.24)</p>
+            <ul>
+              <li><a href="https://vimeo.com/156596002" target="_blank">Lesson-05: 3D Scanning and Printing</a></li>
+            </ul>
+            <p>(2016.03.02)</p>
+            <ul>
+              <li><a href="https://vimeo.com/157466592" target="_blank">Review 05: 3D Scanning and Printing</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-check"></span>
+              Checklist for Wk5
+            </h4>
+            <hr/>
+            <h5><strong>Assignments:</strong></h5>
+            <ul>
+              <li>Test the design rules for your printer(s) (group project)</li>
+              <li>Design and 3D print an object (small, few cm) that could not be made subtractively</li>
+              <li>3D scan an object (and optionally print it)</li>
+            </ul>
+            <h5><strong>Learning outcomes:</strong></h5>
+            <ul>
+              <li>Identify the advantages and limitations of 3D printing and scanning technology</li>
+              <li>Apply design methods and production processes to show your understanding.</li>
+            </ul>
+            <h5><strong>Have you:</strong></h5>
+            <ul>
+              <li>Described what you learned by testing the 3D printers</li>
+              <li>Shown how you designed and made your object and explained why it could not be made subtractively</li>
+              <li>Scanned an object</li>
+              <li>Outlined problems and how you fixed them</li>
+              <li>Included your design files and ‘hero shot’ photos of the scan and the final object</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">footer();</script>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- temporary -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/template.js"></script>
+
+    <script type="text/javascript" src="/archives/2016/fablabamsterdam/students/205/js/template.js"></script>
+    <script type="text/javascript">header();</script>
+  </head>
+
+  <body>
+    <script type="text/javascript">navigation();</script>
+
+    <div class="script">
+      <div class="container">
+        <div class="page-header">
+          <h1><small>WkXX: 2016/0X/XX</small></h1>
+          <h2>COMPUTER-CONTROLLED CUTTING</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9">
+            <h3>0. Assignments for wk3</h3>
+            <hr/>
+            <div class="lead">
+              <p>The assignments for wk3 were as below;</p>
+              <ol>
+                <li>Model (draw, render, animate, simulate, ...) a possible final project</li>
+                <li>Post it on your class page with original 2D and 3D files.</li>              
+              </ol>
+            </div>
+            </br>
+
+            <h3>1. XXXXX</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                XXXXXX
+              </p>
+              <br>
+              <p><strong>XXXXXX</strong></p>
+              <ul>
+                <li><strong>XXXXX</strong>
+                  <P>
+                    XXXXX
+                  </p>
+                </li>
+                <li><strong>xxxx</strong>
+                  <P>
+                  </p>
+                  <div class="screenshot">
+                    <img src="../img/comming_soon.png">
+                  </div>
+                  <p class="text-center">hoge</p>
+                </li>
+              </ul>
+            </div>
+            </br>
+            </br>
+
+            <h3>2. 3D design</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                XXX
+              </p>
+              <br>
+              <ul>
+                <p>First, there are several ways to model solid objects such as;</p>
+                <ul>
+                  <li><strong>CSG(Constructive Solid Geometry)</strong></li>
+                    <P>
+                      modelling by combining objects using boolean operations<br>
+                      <div class="bs-callout bs-callout-info">
+                        <h4>Boolean</h4>
+                        <p>
+                          or boolean logic, is a subset of algebra used for creating true/false statements. Boolean expressions use the operators AND, OR, XOR, and NOT to compare values and return a true or false result.
+                        </p>
+                        <h4>Boolean operations on polygons</h4>
+                        <p>
+                          is a set of Boolean logics (AND, OR, NOT, XOR, ...) operating on one or more sets of polygons in computer graphics. These sets of operations are widely used in computer graphics, CAD, and in EDA (in integrated circuit physical design and verification software).
+                        </p>
+                      </div>
+                    </p>
+                  </li>
+                  <li><strong>Hierarchical modelling</strong>
+                    <p>
+                      modeling using hierachical relations, like parent and child relation between some objects.
+                    </p>
+                  </li>
+                </ul>
+                <br>
+
+                <p>Also, there are two methods for representing shapes such as:</p>
+                <ul>
+                  <li><strong>Boundary representations(B-rep)</strong>
+                    <P>
+                      Boundary representation is a method for representing shapes using the limits in solid modeling and computer-aided design. A solid is represented as a collection of connected surface elements, the boundary between solid and non-solid.
+                    </p>
+                  </li>
+                  <li><strong>Function representations(f-rep)</strong>
+                    <p>
+                      a solid object defined by function of point coordinates. Points with which the function generates a positive outcome belong to the object and points with which the function generates a negative outcome do not belong/are outside the object. If the function equals 0 this describes an isosurface) representations
+                    </p>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            </br>
+
+            <h3>3. XXXXX</h3>
+            <hr/>
+            <div class="lead">
+              <p><strong>2D and 2.5D design - Inkscape - </strong></p>
+              <p>
+                First, I tried to practice using <a href="https://inkscape.org/en/" target="_blank">Inkscape</a>. The reason why I chose this software for vector graphic editor was because 1) I could use without paying, 2) its open source tutorial it was rich. I gave up to install Adobe Illustrator because of its cost.<br>
+              </p>
+              <div class="screenshot">
+                <img src="../img/comming_soon.png">
+              </div>
+              <p class="text-center">Practice scene on Inkscape</p>
+
+              <div class="small_image">
+                <canvas id="cv" width=640 height=480>
+                It seems you are using an outdated browser that does not support canvas :-(
+                </canvas>
+                <script type="text/javascript">
+                  var canvas = document.getElementById('cv');
+                  var viewer = new JSC3D.Viewer(canvas);
+                  viewer.setParameter('SceneUrl','../img/wk05/20160301_pipe4.stl');
+                  viewer.setParameter('ModelColor','#CAA618');
+                  viewer.setParameter('BackgroundColor1','#E5D7BA');
+                  viewer.setParameter('BackgroundColor2','#383840');
+                  viewer.setParameter('RenderMode','flat');
+                  viewer.setParameter('MipMapping','on');
+                  viewer.setParameter('Definition','high');
+                  viewer.setParameter('Renderer','webgl');
+                  viewer.init();
+                  viewer.update();
+                </script>
+              </div>
+
+            </div>
+            </br>
+          </div>
+
+          <!-- left-side -->
+          <div class="col-md-3">
+            <h4>
+              <span class="glyphicon glyphicon-th-list"></span>
+              Outline of this page
+            </h4>
+            <hr/>
+            <p>
+              1. 2D and 2.3D Modelling<br>
+              2. 3D Modelling<br>
+              3. Practice (Inkscape/Fusion 360)<br>
+            </p>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-download-alt"></span>
+              Download output of Wk3
+            </h4>
+            <hr/>
+            <p>Here are my output files for week3:</p>
+            <ul>
+              <li><a href="" target="_blank">xxxxx.SVG</a></li>
+              <li><a href="" target="_blank">xxxxx.IGES</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-file"></span>
+              Lecture Material for Wk3
+            </h4>
+            <hr/>
+            <p><strong>Lecture Note</strong></p>
+            <ul>
+              <li><a href="" target="_blank">Computer-Aided Design</a></li>
+            </ul>
+            <p><strong>Tools</strong></p>
+            <ul>
+              <li><a href="" target="_blank">Inkscape</a></li>
+              <li><a href="" target="_blank">Inkscape</a></li>
+              <li><a href="" target="_blank">Inkscape</a></li>
+              <li><a href="" target="_blank">Inkscape</a></li>
+            </ul>
+            <p><strong>Learning Support</strong></p>
+            <ul>
+              <li><a href="" target="_blank">Inkscape</a></li>
+              <li><a href="" target="_blank">Inkscape</a></li>
+              <li><a href="" target="_blank">Inkscape</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-film"></span>
+              Videos of Wk3
+            </h4>
+            <hr/>
+            <p>Here you can find this weeks's lectures on VIMEO:</p>
+            <p>(2016.02.10)</p>
+            <ul>
+              <li><a href="https://vimeo.com/155004500" target="_blank">Lesson-03: Computer-Controlled Cutting</a></li>
+            </ul>
+            </br>
+            </br>
+            <h4>
+              <span class="glyphicon glyphicon-check"></span>
+              Checklist for Wk3
+            </h4>
+            <hr/>
+            <h5><strong>Assignments:</strong></h5>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <h5><strong>Learning outcomes:</strong></h5>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <h5><strong>Have you:</strong></h5>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">footer();</script>
+  </body>
+</html>
