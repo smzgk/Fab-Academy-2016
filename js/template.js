@@ -11,6 +11,7 @@ function header(){
     html += '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>';
 
     html += '<link rel="stylesheet" href="/archives/2016/fablabamsterdam/students/205/css/main.css">';
+
     html += '<title>Fab Academy 2016 Report | SHUNICHI MIZUGAKI</title>';
     document.write(html);
 }
@@ -112,6 +113,7 @@ function footer(){
     html += '</div>';
     document.write(html);
 }
+
 
 
 

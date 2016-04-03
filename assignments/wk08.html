@@ -7,9 +7,14 @@
 
     <script type="text/javascript" src="/archives/2016/fablabamsterdam/students/205/js/template.js"></script>
     <script type="text/javascript">header();</script>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+
   </head>
 
-  <body>
+  <body onload="prettyPrint()">
     <script type="text/javascript">navigation();</script>
 
     <div class="script">
@@ -58,50 +63,7 @@
             <h3>2. Reading a microcontroller data sheet</h3>
             <hr/>
             <div class="lead">
-              <p>
-                XXX
-              </p>
-              <br>
-              <ul>
-                <p>First, there are several ways to model solid objects such as;</p>
-                <ul>
-                  <li><strong>CSG(Constructive Solid Geometry)</strong></li>
-                    <P>
-                      modelling by combining objects using boolean operations<br>
-                      <div class="bs-callout bs-callout-info">
-                        <h4>Boolean</h4>
-                        <p>
-                          or boolean logic, is a subset of algebra used for creating true/false statements. Boolean expressions use the operators AND, OR, XOR, and NOT to compare values and return a true or false result.
-                        </p>
-                        <h4>Boolean operations on polygons</h4>
-                        <p>
-                          is a set of Boolean logics (AND, OR, NOT, XOR, ...) operating on one or more sets of polygons in computer graphics. These sets of operations are widely used in computer graphics, CAD, and in EDA (in integrated circuit physical design and verification software).
-                        </p>
-                      </div>
-                    </p>
-                  </li>
-                  <li><strong>Hierarchical modelling</strong>
-                    <p>
-                      modeling using hierachical relations, like parent and child relation between some objects.
-                    </p>
-                  </li>
-                </ul>
-                <br>
 
-                <p>Also, there are two methods for representing shapes such as:</p>
-                <ul>
-                  <li><strong>Boundary representations(B-rep)</strong>
-                    <P>
-                      Boundary representation is a method for representing shapes using the limits in solid modeling and computer-aided design. A solid is represented as a collection of connected surface elements, the boundary between solid and non-solid.
-                    </p>
-                  </li>
-                  <li><strong>Function representations(f-rep)</strong>
-                    <p>
-                      a solid object defined by function of point coordinates. Points with which the function generates a positive outcome belong to the object and points with which the function generates a negative outcome do not belong/are outside the object. If the function equals 0 this describes an isosurface) representations
-                    </p>
-                  </li>
-                </ul>
-              </ul>
             </div>
             </br>
 
@@ -140,6 +102,7 @@
               <ul>
                 <li><a href="https://www.arduino.cc/en/Hacking/Bootloader?from=Tutorial.Bootloader" target="_blank">Arduino: Bootloader Development</a></li>
               </ul>
+
               <div class="bs-callout bs-callout-info">
                 <h4>Boot looder</h4>
                 <p>
@@ -182,28 +145,115 @@
 
               <p><strong>Blinking test</strong></p>
               <p>
-
+                First, I tried very simple blinking test, which was the simplest one from Arduino library, to see correct correspondence between pin number of Arduino and those of hello echo board.<br>
+                <br>
+                To identify the correspondings, the web page below was very useful. 
+                <ul>
+                  <li><a href="http://fabacademy.org/archives/content/tutorials/09_Embedded_Programming/Programming_ATtiny_with_Arduino_IDE.html" target="_blank">Fab Academy Tutorial: ATtiny Embedded Programming with the Arduino IDE</a></li>
+                </ul>
+                <br>
+                There is a table of correspondings, so that I could quickly identify it as the table below.
               </p>
 
-              <pre>
+              <div class="screenshot">
+                <img src="../img/wk08/04_table.png" height="393" width="480">
+              </div>
+              <p class="text-center">ATtiny 44A vs. Arduino Pin-Out Numbering</p>
 
+              <p>
+                Then, I referred the schematic of hello-echo board, and found that the pin connected to LED was <code>pin7 on Arduio</code>.
+              </p>
+
+              <div class="screenshot">
+                <img src="../img/wk06/01_shcematic.png" height="1012" width="1552">
+              </div>
+              <p class="text-center">Schematic of hello-echo board</p>
+              <br>
+              The code as below is the first test one, which is very simple blinking program. 
+              
+              <pre>
 int pin_number = 7;
 
-// the setup function runs once when you press reset or power the board
 void setup() {
-  // initialize digital pin 13 as an output.
   pinMode(pin_number, OUTPUT);
 }
 
-// the loop function runs over and over again forever
 void loop() {
   digitalWrite(pin_number, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(1000);              // wait for a second
   digitalWrite(pin_number, LOW);    // turn the LED off by making the voltage LOW
   delay(1000);              // wait for a second
+}</pre>
+              <p class="text-center"><a href="https://www.dropbox.com/s/ozehzm1p85642lo/_20160317_blink_test.ino?dl=0" target="_blank">20160317_blink_test.ino</a></p>
+              <br>
+              Next, I would like to test the attribute of PWM, then I wrote the code as below. Regarding the PWM, <a href="https://www.arduino.cc/en/Tutorial/PWM" target="_blank">Arduino: PWM</a> is very easy to udnerstand.
+
+              <div class="bs-callout bs-callout-info">
+                <h4>PWM</h4>
+                <p>
+                  is abbreviation of Pulse Width Modulation, which is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED.
+                </p>
+              </div>
+                            
+              <pre>
+int pin_number = 7;
+
+void setup() {
+  pinMode(pin_number, OUTPUT);
 }
 
-              </pre>
+void loop() {
+  analogWrite(pin_number, 255);   // turn the LED on (HIGH is the voltage level)
+  delay(500);              // wait for a second
+  analogWrite(pin_number, 200);    // turn the LED off by making the voltage LOW
+  delay(500);              // wait for a second
+  analogWrite(pin_number, 150);    // turn the LED off by making the voltage LOW
+  delay(500);              // wait for a second
+  analogWrite(pin_number, 100);    // turn the LED off by making the voltage LOW
+  delay(500);              // wait for a second
+  analogWrite(pin_number, 50);    // turn the LED off by making the voltage LOW
+  delay(500);              // wait for a second  
+}</pre>
+              <p class="text-center"><a href="https://www.dropbox.com/s/7izyoccvg8vl6qk/_20160317_blink_test_v2.ino?dl=0" target="_blank">20160317_blink_test_v2.ino</a></p>
+              <p>
+                Then, you can see the result of implementation from the video below. 
+              </p>
+
+              <div class="screenshot">             
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Jcd6AUayVgE" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <br>
+              <p>
+                Next, I would like to try simle if sentense on Arduino, so I wrote the simple code reading the status of switch and turing light on/off accordingly.
+              </p>
+              <pre>
+int led_pin = 7;
+int sw_pin = 3;
+
+int sw = 1;
+
+void setup() {
+  pinMode(led_pin, OUTPUT);
+  pinMode(sw_pin, INPUT);  
+}
+
+void loop() {
+  sw = digitalRead(sw_pin);
+
+  if (sw == HIGH) {
+    digitalWrite(led_pin, HIGH);
+  }
+  else {
+    digitalWrite(led_pin, LOW);
+  }
+}</pre>
+
+
+              <p class="text-center"><a href="https://www.dropbox.com/s/01hy39811vxqzc2/_20160403_blinking_test_v3.ino?dl=0" target="_blank">20160317_blink_test_v3.ino</a></p>
+
+              <p><strong>Hello World Test</strong></p>
+
+
               <div class="screenshot">
                 <img src="../img/comming_soon.png">
               </div>
