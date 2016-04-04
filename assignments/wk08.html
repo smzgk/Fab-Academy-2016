@@ -63,9 +63,27 @@
             <h3>2. Reading a microcontroller data sheet</h3>
             <hr/>
             <div class="lead">
-
+              <p><strong>Overview</strong></p>
+              <p>
+                xxx
+              </p>
+              <p><strong>Abbreviation</strong></p>
+              <p>
+                xxx
+              </p>
+              <table class="table">
+                <thead>
+                  <th>Git Code</th>
+                  <th>explanation</th>
+                </thead>
+                <tr>
+                  <td><code>git status</pre></td>
+                  <td>Show the working tree status</td>
+                </tr>
+              </table>
             </div>
             </br>
+            <br>
 
             <h3>3. Programming a board</h3>
             <hr/>
@@ -169,8 +187,12 @@
               </div>
               <p class="text-center">Schematic of hello-echo board</p>
               <br>
-              The code as below is the first test one, which is very simple blinking program. 
-              
+              <p>
+                The code as below is the first test one, which is very simple blinking program. 
+              </p>
+              <br>
+
+              <p class="text-center"><a href="https://www.dropbox.com/s/ozehzm1p85642lo/_20160317_blink_test.ino?dl=0" target="_blank">20160317_blink_test.ino</a></p>              
               <pre>
 int pin_number = 7;
 
@@ -184,7 +206,7 @@ void loop() {
   digitalWrite(pin_number, LOW);    // turn the LED off by making the voltage LOW
   delay(1000);              // wait for a second
 }</pre>
-              <p class="text-center"><a href="https://www.dropbox.com/s/ozehzm1p85642lo/_20160317_blink_test.ino?dl=0" target="_blank">20160317_blink_test.ino</a></p>
+
               <br>
               Next, I would like to test the attribute of PWM, then I wrote the code as below. Regarding the PWM, <a href="https://www.arduino.cc/en/Tutorial/PWM" target="_blank">Arduino: PWM</a> is very easy to udnerstand.
 
@@ -194,7 +216,8 @@ void loop() {
                   is abbreviation of Pulse Width Modulation, which is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED.
                 </p>
               </div>
-                            
+              <br>
+              <p class="text-center"><a href="https://www.dropbox.com/s/7izyoccvg8vl6qk/_20160317_blink_test_v2.ino?dl=0" target="_blank">20160317_blink_test_v2.ino</a></p>                            
               <pre>
 int pin_number = 7;
 
@@ -214,18 +237,21 @@ void loop() {
   analogWrite(pin_number, 50);    // turn the LED off by making the voltage LOW
   delay(500);              // wait for a second  
 }</pre>
-              <p class="text-center"><a href="https://www.dropbox.com/s/7izyoccvg8vl6qk/_20160317_blink_test_v2.ino?dl=0" target="_blank">20160317_blink_test_v2.ino</a></p>
+
               <p>
                 Then, you can see the result of implementation from the video below. 
               </p>
-
+              <br>
               <div class="screenshot">             
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Jcd6AUayVgE" frameborder="0" allowfullscreen></iframe>
               </div>
+              <p class="text-center">Blinking test</p>
               <br>
               <p>
                 Next, I would like to try simle if sentense on Arduino, so I wrote the simple code reading the status of switch and turing light on/off accordingly.
               </p>
+              <br>
+              <p class="text-center"><a href="https://www.dropbox.com/s/01hy39811vxqzc2/_20160403_blinking_test_v3.ino?dl=0" target="_blank">20160317_blink_test_v3.ino</a></p>
               <pre>
 int led_pin = 7;
 int sw_pin = 3;
@@ -248,16 +274,64 @@ void loop() {
   }
 }</pre>
 
-
-              <p class="text-center"><a href="https://www.dropbox.com/s/01hy39811vxqzc2/_20160403_blinking_test_v3.ino?dl=0" target="_blank">20160317_blink_test_v3.ino</a></p>
-
+              <br>
+              <br>
               <p><strong>Hello World Test</strong></p>
+              <p>
+                Next, I tried serial connection using FTDI cable, which I bought with other menbers. Regarding the difference between serial communication and parallel communication, I learned from <a href="https://learn.sparkfun.com/tutorials/serial-communication" target="_blank">this page: sparkfun - Serial Communication</a>.
+              </p>
+              <br>
+              <div class="screenshot">
+                <img src="../img/wk08/05_ftdi.png" height="142" width="368">
+              </div>
+              <p class="text-center">FTDI cable</p>
 
+              <div class="bs-callout bs-callout-info">
+                <h4>Serial Communication</h4>
+                <p>
+                  is the process of sending data one bit at a time, sequentially, over a communication channel or computer bus. This is in contrast to parallel communication, where several bits are sent as a whole, on a link with several parallel channels.
+                </p>
+              </div>
+              <br>
+              <p>
+                I wrote the code below and successfully run the program in the end though at first I was struggling to try run the serial communication with FabTinyISP connected to my laptop...    
+              </p>
+              <br>
+              <p class="text-center"><a href="https://www.dropbox.com/s/pre1gf7oh4x3ujk/_20160317_hello_world.ino?dl=0" target="_blank">20160317_hello_world.ino</a></p>
+              <pre>
+#include <SoftwareSerial.h>
+#define pin_rx 0
+#define pin_tx 1
 
+SoftwareSerial serial(pin_rx, pin_tx);
+
+int sw_pin = 3;
+int sw_value = 0;
+
+void setup() {
+ serial.begin(9600);
+ pinMode(sw_pin, INPUT);
+}
+
+void loop() {
+ sw_value = digitalRead(sw_pin);
+ serial.println("hello World");
+ delay(1000);
+}</pre>
+
+              <br>
               <div class="screenshot">
                 <img src="../img/comming_soon.png">
               </div>
-              <p class="text-center">Practice scene on Inkscape</p>
+              <p class="text-center">Hello-echo board connected by FTDI cable</p>
+              <br>
+              <p>
+                Though I would like to try the other programming languages and environments, and further complex programming, the time was up. The result of hello world programming is as the video below.
+              </p>
+              <div class="screenshot">
+                <img src="../img/comming_soon.png">
+              </div>
+              <p class="text-center">"Hello world" on serial communication</p>
 
             </div>
             </br>
@@ -283,10 +357,12 @@ void loop() {
               Download output of wk8
             </h4>
             <hr/>
-            <p>Here are my output files for week3:</p>
+            <p>Here are my output files for wk8:</p>
             <ul>
-              <li><a href="" target="_blank">xxxxx.SVG</a></li>
-              <li><a href="" target="_blank">xxxxx.IGES</a></li>
+              <li><a href="https://www.dropbox.com/s/ozehzm1p85642lo/_20160317_blink_test.ino?dl=0" target="_blank">20160317_blink_test.ino</a></li>
+              <li><a href="https://www.dropbox.com/s/7izyoccvg8vl6qk/_20160317_blink_test_v2.ino?dl=0" target="_blank">20160317_blink_test_v2.ino</a></li>
+              <li><a href="https://www.dropbox.com/s/01hy39811vxqzc2/_20160403_blinking_test_v3.ino?dl=0" target="_blank">20160317_blink_test_v3.ino</a></li>
+              <li><a href="https://www.dropbox.com/s/pre1gf7oh4x3ujk/_20160317_hello_world.ino?dl=0" target="_blank">20160317_hello_world.ino</a></li>
             </ul>
             </br>
             </br>
@@ -304,8 +380,9 @@ void loop() {
             <ul>
               <li><a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino</a></li>
               <li><a href="http://www.ftdichip.com/Drivers/VCP.htm" target="_blank">FTDI Driver</a></li>
-              <li><a href="" target="_blank">Inkscape</a></li>
-              <li><a href="" target="_blank">Inkscape</a></li>
+              <li><a href="http://www.ftdichip.com/Products/Cables/USBTTLSerial.htm" target="_blank">FTDI Cable</a></li>
+              <li><a href="http://fabacademy.org/archives/2015/doc/FabTinyIsp/index.html" target="_blank">FabTinyISP</a></li>
+              <li><a href="http://fabacademy.org/archives/content/tutorials/07_Electronics_Design/Eagle/Modifing_Hello_Echo_Using_Eagle.html" target="_blank">Hello-echo board</a></li>
             </ul>
             <p><strong>Learning Support</strong></p>
             <ul>
