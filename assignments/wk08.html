@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- temporary -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/template.js"></script>
+
+    <script type="text/javascript" src="/archives/2016/fablabamsterdam/students/205/js/template.js"></script>
+    <script type="text/javascript">header();</script>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+
+
+  </head>
+
+  <body onload="prettyPrint()">
+    <script type="text/javascript">navigation();</script>
+
+    <div class="script">
+      <div class="container">
+        <div class="page-header">
+          <h1><small>wk8: 2016/03/16</small></h1>
+          <h2>EMBEDDED PROGRAMING (WEEK 2 OF 2) </h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9">
+            <h3>0. Assignments for wk8</h3>
+            <hr/>
+            <div class="lead">
+              <p>The assignments for wk8 were as below;</p>
+              <ol>
+			    <li>Read a microcontroller data sheet</li>
+			    <li>Program your board to do something, with as many different programming languages and programming environments as possible</li>
+              </ol>
+            </div>
+            </br>
+
+            <h3>1. Basic information</h3>
+            <hr/>
+            <div class="lead">
+              <p>
+                XXXXXX
+              </p>
+              <br>
+              <p><strong>XXXXXX</strong></p>
+              <ul>
+                <li><strong>XXXXX</strong>
+                  <P>
+                    XXXXX
+                  </p>
+                </li>
+                <li><strong>xxxx</strong>
+                  <P>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            </br>
+            </br>
+
+            <h3>2. Reading a microcontroller data sheet</h3>
+            <hr/>
+            <div class="lead">
+              <p><strong>Overview</strong></p>
+              <p>
+                xxx
+              </p>
+              <p><strong>Abbreviation</strong></p>
+              <p>
+                xxx
+              </p>
+              <table class="table">
+                <thead>
+                  <th>Git Code</th>
+                  <th>explanation</th>
+                </thead>
+                <tr>
+                  <td><code>git status</pre></td>
+                  <td>Show the working tree status</td>
+                </tr>
+              </table>
+            </div>
+            </br>
+            <br>
+
+            <h3>3. Programming a board</h3>
+            <hr/>
+            <div class="lead">
+              <p><strong>Preparation for programming</strong></p>
+              <p>
+                Before starting programming, I had to prepare the environments of embeded programming. I had alredy installed Arduino IDE, so I installed FTDI driver, and added Attiny to Arduino IDE.
+              </p>
+              <ul>
+                <li><a href="https://www.arduino.cc/en/Main/OldSoftwareReleases#previous" target="_blank">Install Arduino IDE 1.6.5</a></li>
+                <li><a href="http://highlowtech.org/?p=1695" target="_blank">Add the Attiny to your board list in Arduino IDE</a></li>
+                <li><a href="http://www.ftdichip.com/Drivers/VCP.htm" target="_blank">Install the FTDI drivers</a></li>
+              </ul>
+
+              <div class="bs-callout bs-callout-info">
+                <h4>Arduino</h4>
+                <p>
+                  is common term for a software company, project, and user community that designs and manufactures computer open-source hardware, open-source software, and microcontroller-based kits for building digital devices and interactive objects that can sense and control physical devices.
+                </p>
+                <h4>IDE</h4>
+                <p>
+                  is abbreviation of Integrated Development Environment, which is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger.
+                </p>
+                <h4>FTDI</h4>
+                <p>
+                  is abbreviation of Future Technology Devices International, which is a Scottish privately held semiconductor device company, specializing in Universal Serial Bus (USB) technology.
+                </p>
+              </div>
+              <br>
+
+              <p>
+                We also had to run the "Burn Bootlooder", following <a href="http://highlowtech.org/?p=1695" target="_blank">Add the Attiny to your board list in Arduino IDE</a>. To understanda the Bootloader development, the website below was useful.
+              </p>
+              <ul>
+                <li><a href="https://www.arduino.cc/en/Hacking/Bootloader?from=Tutorial.Bootloader" target="_blank">Arduino: Bootloader Development</a></li>
+              </ul>
+
+              <div class="bs-callout bs-callout-info">
+                <h4>Boot looder</h4>
+                <p>
+                  also called a boot manager, is a small program that places the operating system (OS) of a computer into memory. When a computer is powered-up or restarted, the basic input/output system (BIOS) performs some initial tests, and then transfers control to the master boot record (MBR) where the boot loader resides.
+                </p>
+              </div>
+
+              <br>
+              <p>
+                I run the bootloader on Arduino, and succeeded to run it as the screenshot below. According to Emma, our electrical instructor, we can run bootloader only once without mistakes, so I was seriously relieved when I can check the result. 
+              </p>
+
+              <div class="small_image">
+                <img src="../img/wk08/01_boot.png" height="767" width="812">
+              </div>
+              <p class="text-center">Burning Bootlooder</p>
+              <br>
+              <p>
+                Next, I initialized the usbtiny, using the Linux commnad:<br> 
+                <code>avrdude -c usbtiny -p t44</code><br>
+                , and now I finished preparation to write any programs to the board.
+              </p>
+
+              <div class="small_image">
+                <img src="../img/wk08/02_check.png" height="857" width="612">
+              </div>
+              <p class="text-center">Initializing the usbtiny</p>
+
+              
+              <br>
+              <p>
+                Also, pure C is main programming language of Arduino, I quickly learned how to write C language using <a href="http://dotinstall.com/lessons/basic_c" target="_blank">Dot Install: C Basic course</a>, which is Japanese freemium programming learning support site because this is first time for me to write C though I used Ruby on my programming work.
+              </p>
+              <div class="small_image">
+                <img src="../img/wk08/03_dotinstall.png" height="233" width="437">
+              </div>
+              <p class="text-center"><a href="http://dotinstall.com/lessons/basic_c" target="_blank">Dot Install</a><br>*for Japanese only</p>
+
+              <br>
+
+              <p><strong>Blinking test</strong></p>
+              <p>
+                First, I tried very simple blinking test, which was the simplest one from Arduino library, to see correct correspondence between pin number of Arduino and those of hello echo board.<br>
+                <br>
+                To identify the correspondings, the web page below was very useful. 
+                <ul>
+                  <li><a href="http://fabacademy.org/archives/content/tutorials/09_Embedded_Programming/Programming_ATtiny_with_Arduino_IDE.html" target="_blank">Fab Academy Tutorial: ATtiny Embedded Programming with the Arduino IDE</a></li>
+                </ul>
+                <br>
+                There is a table of correspondings, so that I could quickly identify it as the table below.
+              </p>
+
+              <div class="screenshot">
+                <img src="../img/wk08/04_table.png" height="393" width="480">
+              </div>
+              <p class="text-center">ATtiny 44A vs. Arduino Pin-Out Numbering</p>
+
+              <p>
+                Then, I referred the schematic of hello-echo board, and found that the pin connected to LED was <code>pin7 on Arduio</code>.
+              </p>
+
+              <div class="screenshot">
+                <img src="../img/wk06/01_shcematic.png" height="1012" width="1552">
+              </div>
+              <p class="text-center">Schematic of hello-echo board</p>
+              <br>
+              <p>
+                The code as below is the first test one, which is very simple blinking program. 
+              </p>
+              <br>
+
+              <p class="text-center"><a href="https://www.dropbox.com/s/ozehzm1p85642lo/_20160317_blink_test.ino?dl=0" target="_blank">20160317_blink_test.ino</a></p>              
+              <pre>
+int pin_number = 7;
+
+void setup() {
+  pinMode(pin_number, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(pin_number, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);              // wait for a second
+  digitalWrite(pin_number, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);              // wait for a second
+}</pre>
+
+              <br>
+              Next, I would like to test the attribute of PWM, then I wrote the code as below. Regarding the PWM, <a href="https://www.arduino.cc/en/Tutorial/PWM" target="_blank">Arduino: PWM</a> is very easy to udnerstand.
+
+              <div class="bs-callout bs-callout-info">
+                <h4>PWM</h4>
+                <p>
+                  is abbreviation of Pulse Width Modulation, which is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED.
+                </p>
+              </div>
+              <br>
+              <p class="text-center"><a href="https://www.dropbox.com/s/7izyoccvg8vl6qk/_20160317_blink_test_v2.ino?dl=0" target="_blank">20160317_blink_test_v2.ino</a></p>                            
+              <pre>
+int pin_number = 7;
+
+void setup() {
+  pinMode(pin_number, OUTPUT);
+}
+
+void loop() {
+  analogWrite(pin_number, 255);   // turn the LED on (HIGH is the voltage level)
+  delay(500);              // wait for a second
+  analogWrite(pin_number, 200);    // turn the LED off by making the voltage LOW
+  delay(500);              // wait for a second
+  analogWrite(pin_number, 150);    // turn the LED off by making the voltage LOW
+  delay(500);              // wait for a second
+  analogWrite(pin_number, 100);    // turn the LED off by making the voltage LOW
+  delay(500);              // wait for a second
+  analogWrite(pin_number, 50);    // turn the LED off by making the voltage LOW
+  delay(500);              // wait for a second  
+}</pre>
+
+              <p>
+                Then, you can see the result of implementation from the video below. 
+              </p>
+              <br>
+              <div class="screenshot">             
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Jcd6AUayVgE" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <p class="text-center">Blinking test</p>
+              <br>
+              <p>
+                Next, I would like to try simle if sentense on Arduino, so I wrote the simple code reading the status of switch and turing light on/off accordingly.
+              </p>
+              <br>
+              <p class="text-center"><a href="https://www.dropbox.com/s/01hy39811vxqzc2/_20160403_blinking_test_v3.ino?dl=0" target="_blank">20160317_blink_test_v3.ino</a></p>
+              <pre>
+int led_pin = 7;
+int sw_pin = 3;
+
+int sw = 1;
+
+void setup() {
+  pinMode(led_pin, OUTPUT);
+  pinMode(sw_pin, INPUT);  
+}
+
+void loop() {
+  sw = digitalRead(sw_pin);
+
+  if (sw == HIGH) {
+    digitalWrite(led_pin, HIGH);
+  }
+  else {
+    digitalWrite(led_pin, LOW);
+  }
+}</pre>
+
+              <br>
+              <br>
+              <p><strong>Hello World Test</strong></p>
+              <p>
+                Next, I tried serial connection using FTDI cable, which I bought with other menbers. Regarding the difference between serial communication and parallel communication, I learned from <a href="https://learn.sparkfun.com/tutorials/serial-communication" target="_blank">this page: sparkfun - Serial Communication</a>.
+              </p>
+              <br>
+              <div class="screenshot">
+                <img src="../img/wk08/05_ftdi.png" height="142" width="368">
+              </div>
+              <p class="text-center">FTDI cable</p>
+
+              <div class="bs-callout bs-callout-info">
+                <h4>Serial Communication</h4>
+                <p>
+                  is the process of sending data one bit at a time, sequentially, over a communication channel or computer bus. This is in contrast to parallel communication, where several bits are sent as a whole, on a link with several parallel channels.
+                </p>
+              </div>
+              <br>
+              <p>
+                I wrote the code below and successfully run the program in the end though at first I was struggling to try run the serial communication with FabTinyISP connected to my laptop...    
+              </p>
+              <br>
+              <div class="screenshot">
+                <img src="../img/wk08/06_ftdi_2.jpg" height="720" width="1280">
+              </div>
+              <p class="text-center">Hello-echo board connected by FTDI cable</p>
+              <br>
+              <p class="text-center"><a href="https://www.dropbox.com/s/pre1gf7oh4x3ujk/_20160317_hello_world.ino?dl=0" target="_blank">20160317_hello_world.ino</a></p>
+              <pre>
+#include <SoftwareSerial.h>
+#define pin_rx 0
+#define pin_tx 1
+
+SoftwareSerial serial(pin_rx, pin_tx);
+
+int sw_pin = 3;
+int sw_value = 0;
+
+void setup() {
+ serial.begin(9600);
+ pinMode(sw_pin, INPUT);
+}
+
+void loop() {
+ sw_value = digitalRead(sw_pin);
+ serial.println("hello World");
+ delay(1000);
+}</pre>
+
+
+              <br>
+              <p>
+                Though I would like to try the other programming languages and environments, and further complex programming, the time was up. The result of hello world programming is as the video below.
+              </p>
+              <div class="screenshot">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/C2559S3uHu4" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <p class="text-center">"Hello world" on serial communication</p>
+
+            </div>
+            </br>
+          </div>
+
+          <!-- left-side -->
+          <div class="col-md-3">
+            <h4>
+              <span class="glyphicon glyphicon-th-list"></span>
+              Outline of this page
+            </h4>
+            <hr/>
+            <p>
+              1. 2D and 2.3D Modelling<br>
+              2. 3D Modelling<br>
+              3. Practice (Inkscape/Fusion 360)<br>
+            </p>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-download-alt"></span>
+              Download output of wk8
+            </h4>
+            <hr/>
+            <p>Here are my output files for wk8:</p>
+            <ul>
+              <li><a href="https://www.dropbox.com/s/ozehzm1p85642lo/_20160317_blink_test.ino?dl=0" target="_blank">20160317_blink_test.ino</a></li>
+              <li><a href="https://www.dropbox.com/s/7izyoccvg8vl6qk/_20160317_blink_test_v2.ino?dl=0" target="_blank">20160317_blink_test_v2.ino</a></li>
+              <li><a href="https://www.dropbox.com/s/01hy39811vxqzc2/_20160403_blinking_test_v3.ino?dl=0" target="_blank">20160317_blink_test_v3.ino</a></li>
+              <li><a href="https://www.dropbox.com/s/pre1gf7oh4x3ujk/_20160317_hello_world.ino?dl=0" target="_blank">20160317_hello_world.ino</a></li>
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-file"></span>
+              Lecture Material for wk8
+            </h4>
+            <hr/>
+            <p><strong>Lecture Note</strong></p>
+            <ul>
+              <li><a href="http://academy.cba.mit.edu/classes/embedded_programming/index.html" target="_blank">Embedded Programming</a></li>
+            </ul>
+            <p><strong>Tools</strong></p>
+            <ul>
+              <li><a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino</a></li>
+              <li><a href="http://www.ftdichip.com/Drivers/VCP.htm" target="_blank">FTDI Driver</a></li>
+              <li><a href="http://www.ftdichip.com/Products/Cables/USBTTLSerial.htm" target="_blank">FTDI Cable</a></li>
+              <li><a href="http://fabacademy.org/archives/2015/doc/FabTinyIsp/index.html" target="_blank">FabTinyISP</a></li>
+              <li><a href="http://fabacademy.org/archives/content/tutorials/07_Electronics_Design/Eagle/Modifing_Hello_Echo_Using_Eagle.html" target="_blank">Hello-echo board</a></li>
+            </ul>
+            <p><strong>Learning Support</strong></p>
+            <ul>
+              <li><a href="http://www.fabacademy.org/archives/2015/doc/makefile.html" target="_blank">Introduction to Make and Makefiles</a></li>
+              <li><a href="https://www.arduino.cc/en/Main/OldSoftwareReleases#previous" target="_blank">Install Arduino IDE 1.6.5</a></li>
+              <li><a href="http://highlowtech.org/?p=1695" target="_blank">Add the Attiny to your board list in Arduino IDE</a></li>
+              <li><a href="http://www.ftdichip.com/Drivers/VCP.htm" target="_blank">Install the ftdi drivers</a></li>
+
+            </ul>
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-film"></span>
+              Videos of wk8
+            </h4>
+            <hr/>
+            <p>Here you can find this weeks's lectures on VIMEO:</p>
+            <p>(2016.03.16)</p>
+            <ul>
+              <li><a href="https://vimeo.com/159242917" target="_blank">Lesson 08: Embedded Programming</a></li>
+            </ul>
+            <p>(2016.03.30)</p>
+            <ul>
+              <li><a href="https://vimeo.com/160910427" target="_blank">Review 08: Embedded Programming</a></li>
+            </ul>
+
+            </br>
+            </br>
+
+            <h4>
+              <span class="glyphicon glyphicon-check"></span>
+              Checklist for wk8
+            </h4>
+            <hr/>
+            <h5><strong>Assignments:</strong></h5>
+            <ul>
+              <li>Read a microcontroller data sheet</li>
+              <li>Program your board to do something, with as many different programming languages and programming environments as possible</li>
+            </ul>
+            <h5><strong>Learning outcomes:</strong></h5>
+            <ul>
+              <li>Identify relevant information in a microcontroller data sheet</li>
+              <li>Implement programming protocols</li>
+            </ul>
+            <h5><strong>Have you:</strong></h5>
+            <ul>
+              <li>Documented what you learned from reading a microcontroller datasheet.</li>
+              <li>What questions do you have? What would you like to learn more about?</li>
+              <li>Programmed your board</li>
+			        <li>Included your code</li>
+              <li>Described the programming process/es you used</li>
+			      </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">footer();</script>
+  </body>
+</html>

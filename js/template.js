@@ -11,6 +11,7 @@ function header(){
     html += '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>';
 
     html += '<link rel="stylesheet" href="/archives/2016/fablabamsterdam/students/205/css/main.css">';
+
     html += '<title>Fab Academy 2016 Report | SHUNICHI MIZUGAKI</title>';
     document.write(html);
 }
@@ -49,6 +50,8 @@ function navigation(){
     html += '<li><a href="/archives/2016/fablabamsterdam/students/205/assignments/wk05.html">Wk05: 3D PRINTING AND SCANNING</a></li>';
     html += '<li><a href="/archives/2016/fablabamsterdam/students/205/assignments/wk06.html">Wk06: ELECTRONICS DESIGN (WEEK 1 OF 2)</a></li>';
     html += '<li><a href="/archives/2016/fablabamsterdam/students/205/assignments/wk07.html">Wk07: COMPUTER-CONTROLLED MACHINING</a></li>';
+    html += '<li><a href="/archives/2016/fablabamsterdam/students/205/assignments/wk08.html">Wk08: EMBEDDED PROGRAMING (WEEK 2 OF 2)</a></li>';
+
 
     html += '<li><a href="#">Coming soon</a></li>';
     html += '</ul>';
@@ -110,6 +113,7 @@ function footer(){
     html += '</div>';
     document.write(html);
 }
+
 
 
 
